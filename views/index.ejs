@@ -18,7 +18,8 @@
 
     <link rel="stylesheet" href="/stylesheets/particle.css"/>
     <link rel="stylesheet" href="/stylesheets/style.css"/>
-
+    <link rel="icon" href="/images/top-logo.png">
+    
     <script src="/javascripts/jQuery.js"></script>
     <script src="/javascripts/wow.min.js"></script>
 
@@ -39,7 +40,7 @@
 {
   height:100vh;
   width:100vw;
-  background-color: black;
+  background-color:black;
   position:fixed;
   z-index:100;
 }
@@ -73,7 +74,7 @@
 <!-- <div ng-include src="'navbar.html'">
 </div> -->
   <div class="preloader">
-    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="80%" height="auto"></img></div>
   </div>
   <div id="overlay" onclick="closeNav()"></div>
   <div id="mySidenav" class="sidenav">
@@ -121,11 +122,11 @@
 <!-- About Page -->
 
   <section class="row" id="aboutPage">
-    <div class="about-image col-sm-6 col-xs-12">
+    <div class="about-image about-back col-sm-6 col-xs-12">
     </div>
     <div class="row about col-sm-6 col-xs-12">
       <div class="altr"></div>
-      <h2><span id="color">ABOUT</span> US</h2>
+      <h2><span id="color">ABOUT</span style="color:#999"> US</h2>
       <br><br>
       <div class="about-content">
         <p class="wow slideInRight" data-wow-duration="0.7s">
@@ -171,10 +172,13 @@ function setHeight()
 {
   var windowHeight=$(window).height();
   var windowWidth=$(window).width();
-  $(".particle-network-animation,#homePage,#aboutPage,.about-image").css("height",windowHeight+'px');
-  $(".about").css("height",windowHeight+$(".altr").height()+'px');
+  $(".particle-network-animation,#homePage,#aboutPage,.about-image,.about").css("height",windowHeight+'px');
+  
   if(windowWidth<991)
-    $(".altr").css("height",$(".mobile-header").height()+'px');
+    {
+      $(".altr").css("height",$(".mobile-header").height()+'px');
+      $(".about").css("height",windowHeight+$(".altr").height()+'px');
+    }
   else
       $(".altr").css("height",$(".pc-header").height()+'px');
 }

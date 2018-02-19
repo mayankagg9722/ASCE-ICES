@@ -181,11 +181,12 @@ function getTotal(contingentID, sessionID, callback) {
 
 router.get('/payment', function (req, res, next) {
   if(!req.session.id || !req.session.contingentID) {
-    res.json({
-      'message':'You are not authorized to access this page',
-      'status':'401',
-      'success':false
-    });
+    // res.json({
+    //   'message':'You are not authorized to access this page',
+    //   'status':'401',
+    //   'success':false
+    // });
+    res.redirect('/login');
   }
 
   else {

@@ -250,16 +250,17 @@ a:hover
 }
 .about-back
 {
-  background-color: #222;
+  background-color: black;
 }
 .about
 {
   padding-left:20px;
-  background-color:#efefef;
+  background-color:black;
   padding-bottom:20px;
 }
 .about-content
 {
+  color:white;
   font-size:20px;
   padding-right:40px;
   text-align:justify;

@@ -212,14 +212,14 @@ a:hover
 }
 .events
 {
-  height:40vh;
+  height:30vh;
   text-align:center;
 }
 .events p
 {
   display: none;
   color:white;
-  height:40vh;
+  height:30vh;
   background-color:#121;
   opacity:0.8;
   padding:20px;
