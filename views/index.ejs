@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASCE Conference 2018</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="about ASCE 2018">
+    <meta name="author" content="ASCE">
+
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+   	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+
+    <link rel="stylesheet" href="/stylesheets/particle.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+
+    <script src="/javascripts/jQuery.js"></script>
+    <script src="/javascripts/wow.min.js"></script>
+
+    <script src="/javascripts/side-nav.js" defer></script>
+    <script src="/javascripts/home-animate.js" async></script>
+    <!-- <script src="../javascripts/navbar-fn.js" defer></script> -->
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+  </head>
+
+<style type="text/css">
+*
+{
+	font-family: 'Questrial', sans-serif;
+}
+.preloader
+{
+  height:100vh;
+  width:100vw;
+  background-color: black;
+  position:fixed;
+  z-index:100;
+}
+.preloader div
+{
+  text-align:center;
+  z-index:-3;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+#aboutPage
+{
+  width:100vw;
+}
+#homePage
+{
+  overflow:hidden;
+  position:relative;
+  width:100vw;
+/*  background:url("../images/f1(1).jpg");
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;*/
+}
+</style>
+
+<body>
+
+<!-- <div ng-include src="'navbar.html'">
+</div> -->
+  <div class="preloader">
+    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+  </div>
+  <div id="overlay" onclick="closeNav()"></div>
+  <div id="mySidenav" class="sidenav">
+    <i class="closebtn" onclick="closeNav()">&times;</i>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+    <a href="/conference"  onclick="closeNav()">Conference</a>
+    <a href="/workshop" onclick="closeNav()">Workshop</a>
+    <a href="/events" onclick="closeNav()">Events</a>
+    <a href="/register" onclick="closeNav()">Register</a>
+    <a href="/login" onclick="closeNav()"><%=option%></a>
+  </div>
+  <div class="mobile-header col-xs-12 row">
+    <div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+    <div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+  </div>
+  <div class="pc-header col-sm-12 row">
+    <div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+    <div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:20px;margin-bottom:20px;">
+      <p><a href="/">Home</a></p>
+      <p><a href="/conference">Conference</a></p>
+      <p><a href="/canoe">Canoe Competition</a></p>
+      <p><a href="/events">Events</a></p>
+      <p><a href="/workshop">Workshop</a></p>
+      <p><a href="/login"><%=option%></a></p>
+    </div>
+  </div>
+
+<!-- Landing Page -->
+
+  <section class="row" id="homePage">
+  <div class="particle-network-animation">
+  </div>
+  	<div class="home row">
+  	<div class="altr"></div>
+  	<div class="home-heading">
+  		<h1 class="ultra-large">A<span class="full-form">merican</span>S<span class="full-form" style="margin-right:4px">ociety of </span>C<span class="full-form">ivil</span>E<span class="full-form">ngineers</span></h1>
+      <h1 id="subtitle">STUDENT<br>CONFERENCE</h1><br><br>
+  		<p><i class="fa fa-calendar"></i> 15-18th March,2018<br><i class="fa fa-map-marker"></i>  Vellore Institute Of Technology,Vellore</p><br><br>
+  		<button type="button" id="register" onclick="window.location.href='/register'">REGISTER</button>
+  	</div>
+  </div>
+  </section>
+
+<!-- About Page -->
+
+  <section class="row" id="aboutPage">
+    <div class="about-image col-sm-6 col-xs-12">
+    </div>
+    <div class="row about col-sm-6 col-xs-12">
+      <div class="altr"></div>
+      <h2><span id="color">ABOUT</span> US</h2>
+      <br><br>
+      <div class="about-content">
+        <p class="wow slideInRight" data-wow-duration="0.7s">
+        <b>The American Society of Civil Engineers represents more than 150,000 members of the civil engineering profession in 177 countries.</b></p><br>
+        <p class="wow slideInRight" data-wow-duration="0.7s" data-wow-delay="0.3s">
+        VIT University is a progressive educational institution enriched with an in house strength of over 2500 students from each state of India and over 54 countries. It is dedicated towards the pursuit of excellence since 30 years now and is ranked among top 15 premiere institutes of India. Students here are encouraged on this journey by our committed faculty, world-class facilities and student-friendly educational systems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Page -->
+
+  <section class="row" id="contactPage">
+    <div class="altr col-xs-12"></div>
+    <h2 class="wow slideInUp" data-wow-duration="0.4s"><span id="color">CONTACT</span> US</h2>
+    <p class="wow slideInUp" data-wow-duration="0.4s">Any Questions? Drop us a note and We'll get back to you</p> <br>
+    <form class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-3 wow slideInUp" data-wow-duration="1s">
+      <input type="text" name="name" placeholder="Name" required></input><br><br>
+      <input type="email" name="email" placeholder="Email" required></input><br><br>
+      <textarea name="message" placeholder="Message" required></textarea><br><br>
+      <button type="submit">Submit</input>
+    </form>
+  </section>
+
+<!-- Footer -->
+
+  <footer class="row">
+    <div class="col-xs-12">
+      <a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <br>
+    </div>
+    <div  class="col-xs-12" style="bottom:20px;position:absolute;">
+      <p id="legal">All rights reserved &copy; 2018</p>
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript">
+function setHeight()
+{
+  var windowHeight=$(window).height();
+  var windowWidth=$(window).width();
+  $(".particle-network-animation,#homePage,#aboutPage,.about-image").css("height",windowHeight+'px');
+  $(".about").css("height",windowHeight+$(".altr").height()+'px');
+  if(windowWidth<991)
+    $(".altr").css("height",$(".mobile-header").height()+'px');
+  else
+      $(".altr").css("height",$(".pc-header").height()+'px');
+}
+function onScrollActivities()
+{   
+  var windowWidth=$(window).width();
+  var x=$(window).scrollTop();
+    var h=$("#aboutPage").offset().top;
+  if(windowWidth<=991)
+  {
+    //$(".mobile-header").slideDown();
+      if(x>=10)
+      {
+        // $(".mobile-header").css({borderBottom:"1px solid #e7e7e7",backgroundColor:"white"});
+        // $(".ham i").css({color:"black"});
+        $(".mobile-header").slideDown(200);
+      }
+      else
+      {
+        // $(".mobile-header").css({borderBottom:"0px",backgroundColor:"transparent",boxShadow:"none"});
+        // $(".ham i").css({color:"white"});
+        $(".mobile-header").slideUp(200);
+      }
+  }
+
+    $(".pc-header").css({borderBottom:"1px solid #e7e7e7",backgroundColor:"#fff",marginTop:"0px",transition:"all 0.5s ease"});
+    $(".pc-header a").css({color:"#222",transition:"all 0.5s ease"});
+    if(x===0)
+    {
+      $(".pc-header a").css({color:"white",transition:"all 0.5s ease"});
+      $(".pc-header").css({borderBottom:"0px",color:"white",backgroundColor:"transparent",marginTop:"25px",transition:"all 0.5s ease"});
+    }
+}
+$(window).load(function(){
+  $(".preloader").hide()
+});
+$(document).ready(function(){
+  setHeight();
+  // if($(window).width()<=991)
+  // {
+  //   $("#homePage").css({background:"url('/images/f1(1).jpg')",backgroundSize:"cover",backgroundPosition:"center"});
+  // }
+
+  $(window).on("scroll",function(){
+    onScrollActivities();
+  });
+  $(".particle-network-animation").css("height",h+'px')
+  if($(window).width()>991)
+  {
+  // $(".").hover(function(){
+  //   $(".full-form").show(800);
+  //   $(".ultra-large").css("letter-spacing","5px");
+  //   $(".ultra-large").css("font-size","80px");
+  // },
+  // function(){
+  //   $(".full-form").hide(800);
+  //   $(".ultra-large").css("letter-spacing","30px");
+  //   $(".ultra-large").css("font-size","100px");
+  // });
+  // }
+  var h=$(window).height();;
+  $(".home").css("height",h+'px');
+  $(".logo").fadeIn(2000);
+  $(window).on("resize",function(){
+    setHeight();
+    var h=$(window).height();
+    $(".particle-network-animation").css("height",h+'px');
+  });
+  }
+});
+</script> 
+
+</html>

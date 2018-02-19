@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Admin Portal</title>
+</head>
+
+<style>
+    body {
+        padding: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #logout {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+
+    table {
+        margin-top: 50px;
+        display: none;
+    }
+
+    table, tr, td, th {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 3px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+    
+</style>
+<body>
+
+    <h1>Welcome Admin</h1>
+
+
+    <h2>Search By contingentID</h2>
+    <form id="searchByContingentID">
+            
+        <label>contingentID: </label> <input type="text" placeholder="contingentID" id="contingentID">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <br><br>
+    <div id="userData">
+
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <div class="registeredUsers">
+        <h2>Registered Users</h2>
+        <button id="viewRegisteredUsers">Click to View Registered Users</button>
+    </div>
+
+    <table id="userDetailsTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contingent ID</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Contact</th>
+        </tr>
+    </table>
+
+    <br><br><br><br><br><br><br>
+
+    <h1>All Registered Users(EVENTS IN CART)</h1>
+    <form id="events">
+            <select name="itemID" id="eventsItemID">
+                <option value="asce_e1">QUIZ BOWL</option>
+                <option value="asce_e2">CONSTROLOGER</option>
+                <option value="asce_e9">JENGA</option>
+                <option value="asce_e3">ARCH BRIDGE</option>
+                <option value="asce_e4">MEAD PAPER</option>
+                <option value="asce_e5">SURVEYOR</option>
+                <option value="asce_e6">FRESHMORE CHALLENGE</option>
+                <option value="asce_e7">TRAFFINEER</option>
+                <option value="asce_e8">ENVOCIST</option>
+                <option value="asce_e10">CONCRETE BASEBALL BAT COMPETITION</option>
+                <option value="asce_e11">CONSTROLOGER</option>
+                <option value="asce_e12">CADATAHON</option>
+                <option value="asce_e13">CONCRETE CANOE COMPETITION</option>
+            </select>
+
+            <input type="submit" value="SUBMIT">
+    </form>
+
+
+    <table id="eventsRegisteredTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contingent ID</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Contact</th>
+        </tr>
+
+        <tbody id="eventsRegisteredTableBody"></tbody>
+
+    </table>
+
+    <br><br><br><br><br><br><br>
+
+    <h1>All Registered Users(WORKSHOPS IN CART)</h1>
+    <form id="workshops">
+        <select name="itemID" id="workshopsItemID">
+            <option value="asce_w1">TRANSPORT ENGINEERING WORKSHOP</option>
+            <option value="asce_w3">ADVANCED CONCRETE TECHNOLOGY WORKSHOP</option>
+            <option value="asce_w4">SEISMIC DESIGN</option>
+            <option value="asce_w5">FLOATING CONCRETE WORKSHOP</option>
+            <option value="asce_w6">TALL BUILDING  WORKSHOP</option>
+            <option value="asce_w7">STAAD PRO WORKSHOP</option>
+            <option value="asce_w8">REVIT WORKSHOP</option>
+            <option value="asce_w9">ADVANCED FOUNDATION ANALYSIS</option>
+            <option value="asce_w10">BENTLEY ARCHITECTURE</option>
+        </select>
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <table id="workshopsRegisteredTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contingent ID</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Contact</th>
+        </tr>
+
+        <tbody id="workshopsRegisteredTableBody"></tbody>
+
+    </table>
+
+
+
+    <br><br><br><br><br><br><br>
+
+    <h1>All Registered Users(EVENTS PURCHASED)</h1>
+    <form id="eventsPurchased">
+            <select name="itemID" id="eventsPurchasedItemID">
+                <option value="asce_e1">QUIZ BOWL</option>
+                <option value="asce_e2">CONSTROLOGER</option>
+                <option value="asce_e9">JENGA</option>
+                <option value="asce_e3">ARCH BRIDGE</option>
+                <option value="asce_e4">MEAD PAPER</option>
+                <option value="asce_e5">SURVEYOR</option>
+                <option value="asce_e6">FRESHMORE CHALLENGE</option>
+                <option value="asce_e7">TRAFFINEER</option>
+                <option value="asce_e8">ENVOCIST</option>
+                <option value="asce_e10">CONCRETE BASEBALL BAT COMPETITION</option>
+                <option value="asce_e11">CONSTROLOGER</option>
+                <option value="asce_e12">CADATAHON</option>
+                <option value="asce_e13">CONCRETE CANOE COMPETITION</option>
+            </select>
+
+            <input type="submit" value="SUBMIT">
+    </form>
+
+    <table id="eventsPurchasedTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contingent ID</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Contact</th>
+        </tr>
+
+        <tbody id="eventsPurchasedTableBody"></tbody>
+
+    </table>
+
+
+    <br><br><br><br><br><br><br>
+
+    <h1>All Registered Users(WORKSHOPS PURCHASED)</h1>
+    <form id="workshopsPurchased">
+        <select name="itemID" id="workshopsPurchasedItemID">
+            <option value="asce_w1">TRANSPORT ENGINEERING WORKSHOP</option>
+            <option value="asce_w3">ADVANCED CONCRETE TECHNOLOGY WORKSHOP</option>
+            <option value="asce_w4">SEISMIC DESIGN</option>
+            <option value="asce_w5">FLOATING CONCRETE WORKSHOP</option>
+            <option value="asce_w6">TALL BUILDING  WORKSHOP</option>
+            <option value="asce_w7">STAAD PRO WORKSHOP</option>
+            <option value="asce_w8">REVIT WORKSHOP</option>
+            <option value="asce_w9">ADVANCED FOUNDATION ANALYSIS</option>
+            <option value="asce_w10">BENTLEY ARCHITECTURE</option>
+        </select>
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <table id="workshopsPurchasedTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contingent ID</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Contact</th>
+        </tr>
+
+        <tbody id="workshopsPurchasedTableBody"></tbody>
+
+    </table>
+
+
+    <a id="logout" href="/logout">LOGOUT</a>
+
+    <br><br><br><br><br><br><br>
+
+    <script type="text/javascript" src="/javascripts/jQuery.js"></script>
+    <script type="text/javascript">
+
+
+        $("#searchByContingentID").submit(function(e) {
+            e.preventDefault();
+            var contingentID = $("#contingentID").val();
+            var userData = $('#userData');
+            var userDataP = $('#userData p');
+
+            userData.empty();
+            $.ajax({
+                type: "POST",
+                url: "/fetchDataFromID",
+                data: {
+                    contingentID:contingentID
+                },
+                success: function (response) {
+                    response = response[0];
+                    for(var key in response) {
+                        element = response[key];
+                        if(key == "cart" || key == "purchased") {
+                            
+                        }
+                        var userKey = $('<span><b>'+ key + '</b>-' + element + '</span><br><br>');
+                        userData.append(userKey);
+                    }
+                }
+            });
+        }); 
+
+
+        var userDetailsTable = $('#userDetailsTable');
+        var viewRegisteredUsers = $('#viewRegisteredUsers');
+        var downloadExcelSheet = $('#downloadExcelSheet');
+        var eventsRegisteredTable = $('#eventsRegisteredTable');
+        var eventsRegisteredTableBody = $('#eventsRegisteredTableBody');
+        var workshopsRegisteredTable = $('#workshopsRegisteredTable');
+        var workshopsRegisteredTableBody = $("#workshopsRegisteredTableBody");
+
+        $("#events").submit(function(e) {
+            e.preventDefault();
+            var itemID = $("#eventsItemID").val();
+            eventsRegisteredTable.css('display', 'inline-block');
+            eventsRegisteredTableBody.empty();
+            
+            $.ajax({
+                type: "POST",
+                url: "/fetchRegisteredUsers",
+                data: {
+                    "itemType":"events",
+                    "itemID":itemID
+                },
+                success: function (response) {
+
+                    for (var key in response) {
+                        var element = response[key];
+                        var userField = $('<tr><td>' +element["firstName"]+'</td><td>' +element["lastName"] +'</td><td>' +element["contingentID"]+'</td><td>' + element["email"]+'</td><td>' +element["college"]+'</td><td>' +element["mobileNumber"]+'</td></tr>');
+                        eventsRegisteredTableBody.append(userField);
+                    }
+
+                }
+            });
+        });
+
+        $("#workshops").submit(function(e) {
+            e.preventDefault();
+            var itemID = $("#workshopsItemID").val();
+            workshopsRegisteredTable.css('display', 'inline-block');
+            workshopsRegisteredTableBody.empty();
+            $.ajax({
+                type: "POST",
+                url: "/fetchRegisteredUsers",
+                data: {
+                    "itemType":"workshops",
+                    "itemID":itemID
+                },
+                success: function (response) {
+
+                    for (var key in response) {
+                        var element = response[key];
+                        var userField = $('<tr><td>' +element["firstName"]+'</td><td>' +element["lastName"] +'</td><td>' +element["contingentID"]+'</td><td>' + element["email"]+'</td><td>' +element["college"]+'</td><td>' +element["mobileNumber"]+'</td></tr>');
+                        workshopsRegisteredTableBody.append(userField);
+                    }
+                }
+            });
+        });
+
+
+        var eventsPurchasedTable = $('#eventsPurchasedTable');
+        var eventsPurchasedTableBody = $('#eventsPurchasedTableBody');
+        var workshopsPurchasedTable = $('#workshopsPurchasedTable');
+        var workshopsPurchasedTableBody = $("#workshopsPurchasedTableBody");
+
+        $("#eventsPurchased").submit(function(e) {
+            e.preventDefault();
+            var itemID = $("#eventsPurchasedItemID").val();
+            eventsPurchasedTable.css('display', 'inline-block');
+            eventsPurchasedTableBody.empty();
+            
+            $.ajax({
+                type: "POST",
+                url: "/fetchPaidUsers",
+                data: {
+                    "itemType":"events",
+                    "itemID":itemID
+                },
+                success: function (response) {
+
+                    for (var key in response) {
+                        var element = response[key];
+                        var userField = $('<tr><td>' +element["firstName"]+'</td><td>' +element["lastName"] +'</td><td>' +element["contingentID"]+'</td><td>' + element["email"]+'</td><td>' +element["college"]+'</td><td>' +element["mobileNumber"]+'</td></tr>');
+                        eventsPurchasedTableBody.append(userField);
+                    }
+
+                }
+            });
+        });
+
+        $("#workshopsPurchased").submit(function(e) {
+            e.preventDefault();
+            var itemID = $("#workshopsPurchasedItemID").val();
+            workshopsPurchasedTable.css('display', 'inline-block');
+            workshopsPurchasedTableBody.empty();
+            $.ajax({
+                type: "POST",
+                url: "/fetchPaidUsers",
+                data: {
+                    "itemType":"workshops",
+                    "itemID":itemID
+                },
+                success: function (response) {
+
+                    for (var key in response) {
+                        var element = response[key];
+                        var userField = $('<tr><td>' +element["firstName"]+'</td><td>' +element["lastName"] +'</td><td>' +element["contingentID"]+'</td><td>' + element["email"]+'</td><td>' +element["college"]+'</td><td>' +element["mobileNumber"]+'</td></tr>');
+                        workshopsPurchasedTableBody.append(userField);
+                    }
+                }
+            });
+        });
+
+
+
+        viewRegisteredUsers.click(function () { 
+            userDetailsTable.css('display', 'inline-block');
+            $.ajax({
+            type: "GET",
+            url: "/getRegisteredUserData",
+            success: function (data) {
+                
+                data.forEach(element => {
+                    var userField = $('<tr><td>' +element["firstName"]+'</td><td>' +element["lastName"] +'</td><td>' +element["contingentID"]+'</td><td>' + element["email"]+'</td><td>' +element["college"]+'</td><td>' +element["mobileNumber"]+'</td></tr>');
+                    userDetailsTable.append(userField);
+                });
+
+                
+            }
+        });
+    });
+        
+    </script>
+</body>
+</html>	

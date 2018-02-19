@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Events</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="ASCE">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+
+<link rel="stylesheet" href="/stylesheets/custom_style.css"/>
+<link rel="stylesheet" href="/stylesheets/header.css"/>
+
+<script src="/javascripts/jQuery.js"></script>
+<script src="/javascripts/wow.min.js"></script>
+
+<script src="/javascripts/navbar-fn.js" defer></script>
+<script src="/javascripts/side-nav.js" defer></script>
+<script>
+new WOW().init();
+</script>
+</head>
+<style type="text/css">
+*
+{
+  font-family: 'Questrial', sans-serif;
+}
+.preloader
+{
+  height:100vh;
+  width:100vw;
+  background-color: black;
+  position:fixed;
+  z-index:99999;
+}
+.preloader div
+{
+  text-align:center;
+  z-index:100000;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.content-background
+{
+  background:url("/images/events.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#evt1
+{
+	background:url("/images/events/1.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt2
+{
+	background:url("/images/events/2.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt3
+{
+	background:url("/images/events/3.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt4
+{
+	background:url("/images/events/4.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt5
+{
+	background:url("/images/events/5.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt7
+{
+	background:url("/images/events/6.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt8
+{
+	background:url("/images/events/7.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt9
+{
+	background:url("/images/events/8.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt10
+{
+	background:url("/images/events/9.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt11
+{
+	background:url("/images/events/10.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+#evt12
+{
+	background:url("/images/events/11.png");
+	background-position: center;
+	background-size: cover;
+}
+</style>
+<body>
+  <div class="preloader">
+    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+  </div>
+
+    <div id="overlay" onclick="closeNav()"></div>
+  <div id="mySidenav" class="sidenav">
+    <i class="closebtn" onclick="closeNav()">&times;</i>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+    <a href="/conference"  onclick="closeNav()">Conference</a>
+    <a href="/workshop" onclick="closeNav()">Workshop</a>
+    <a href="/events" onclick="closeNav()">Events</a>
+    <a href="/register" onclick="closeNav()">Register</a>
+    <a href="/login" onclick="closeNav()"><%=option%></a>
+  </div>
+  <div class="mobile-header col-xs-12 row">
+    <div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+    <div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+  </div>
+  <div class="pc-header col-sm-12 row">
+    <div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+    <div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:20px;margin-bottom:20px;">
+      <p><a href="/">Home</a></p>
+      <p><a href="/conference">Conference</a></p>
+      <p><a href="/canoe">Canoe Competition</a></p>
+      <p><a href="/events">Events</a></p>
+      <p><a href="/workshop">Workshop</a></p>
+      <p><a href="/login"><%=option%></a></p>
+    </div>
+  </div>
+	<div id="e1d" class="evt-det animated"  style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Envocist</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>The objective is to design and build a treatment process for removal of particles and organics from the water source. The water source will be provided by the host school. The challenge is to see which team can filter the provided water most effectively and efficiently.</p><br><br>
+		<p>DATE:15/03/2018 and 18/03/2018</p>
+		<p>TIME:17:00-18:00 and 14:00-16:00</p>
+		<p>VENUE:GDN 142</p>
+		<p>REGISTRATION FEES:Rs.100</p>
+		<p>CONTACT:<br>+91 9944508082(Anany Tiwari)</p></div>
+	</div>
+	<div id="e2d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Fresh More Challenges</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>This event is designed to give each school a flagpole to fly their own colours at the conference and show some school spirit.  However, it won’t be as easy as just putting it together.  Each team will compete to be the fastest team with the best teamwork in order to deduce locations of flagpole parts from clues. At every destination, each team must compete in a series of challenges, some mental and some physical. The competitors will learn of their next location only once they have un-riddled their previous task.</p><br><br>
+		<p>DATE:16/03/2018</p>
+		<p>TIME:9:00-12:00</p>
+		<p>VENUE:CONTROL ROOM</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 7530000171(Rimlee)</p></div>
+	</div>
+	<div id="e3d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Quiz Bowl</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>A fun and engaging quiz on basis and fundamentals of civil engineering, testing the perspective of the participant in the field. It is a mix of thrilling technical questions which will be asked in the form of pictures, time based questions, etc. The team scoring the highest would be winning duo.</p><br><br>
+		<p>DATE:16/03/2018</p>
+		<p>TIME:14:00-15:30</p>
+		<p>VENUE:CDMM 203</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 8003880088(Aditya Raj Singh)</p></div>
+	</div>
+	<div id="e4d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Concrete Baseball Bat</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>Teams will design and construct a baseball bat made of concrete.  Given the requirements, teams will have a chance to produce the most cost and strength efficient concrete bat. Participants are required to apply the same to a practical application wherein teams striking the ball farthest in the baseball challenge would earn points. Teams having an overall high score would be declared winners.</p><br><br>
+		<p>DATE:18/03/2018</p>
+		<p>TIME:10-12</p>
+		<p>VENUE:KALPANA CHAWLA GROUND</p>
+		<p>REGISTRATION FEES:Rs.100</p>
+		<p>CONTACT:<br>+91 9791555413(Mudit Mishra)</p></div>
+	</div>
+	<div id="e5d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Surveyor Challenge</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>This competition is to test teams on basic surveying techniques such as distance measurements, levelling, and traversing.The competition will consist one or all of the following events:<br><span class="underline">DISTANCE MEASUREMENT</span>: Each team will tape and pace several distances between fixed points.<br><span class="underline">LEVELLING</span>: Each team will calculate the elevation of several turning points between one benchmark to another benchmark.<br><span class="underline">TRAVERSE</span>:Each team will find the interior angles of a traverse that is made by a series of fixed points.</p><br><br>
+		<p>DATE:16/03/2017</p>
+		<p>TIME:9-12:30</p>
+		<p>VENUE:KALPANA CHAWLA GROUND</p>
+		<p>REGISTRATION FEES:Rs.100</p>
+		<p>CONTACT:<br>+91 7530003328 (Ronak Singh)</p></div>
+	</div>
+<!-- 	<div id="e6d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Sustainable Design Challenge</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>This event provides a platform for students to design efficient and imperishable infrastructure which promotes Sustainable Development. It is a great opportunity for students to think up innovative solutions to the very real sustainable crisis that our generation is going to face.</p><br><br>
+		<p>DATE:</p>
+		<p>TIME:xx:yy</p>
+		<p>REGISTRATION FEES:Rs. XXXX</p>
+		<p>CONTACT:<br>+91 1234567890(abc)</p></div>
+	</div> -->
+	<div id="e7d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Arch Bridge</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>The participants will be provided with bricks, sand and water along with a supporting arch. They would build a bridge over the arch without using any binding material cement within a given period of time after which the support is removed after which the arch is tested.</p><br><br>
+		<p>DATE:15/03/2018 and 16/03/2018 </p>
+		<p>TIME:10:00-17:00</p>
+		<p>VENUE:FOODYS</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 7389956959(Vipul Singh)</p></div>
+	</div>
+	<div id="e8d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Traffineer</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>Teams will be provided with a transportation problem at the time of the challenge and asked to develop a solution. Each team will apply the principles of transportation planning, traffic operations, and highway design to respond to the design problem. The response will be primarily qualitative; thus teams should focus on development of an innovative conceptual design that would provide a long-term transportation solution. Teams will be granted with two hours to prepare a proposed conceptual solution, organize submittal materials, and prepare a 5-minute presentation. Team presentations will be delivered to a panel of judges for review, which could include a short question and answer period.</p><br><br>
+		<p>DATE:15/03/2018</p>
+		<p>TIME:14-16:30</p>
+		<p>VENUE:GDN 153</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 7376082670(Ayush)</p></div>
+	</div>
+	<div id="e9d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Mead Paper</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>This event requires the submission of written materials on any given topic (via mail up to a desired time). One the basis if performance, the selected candidates are required to give a formal presentation in the conference.</p><br><br>
+		<p>DATE:16/03/2018</p>
+		<p>TIME:10:00-12:00</p>
+		<p>VENUE:CDMM 203</p>
+		<p>REGISTRATION FEES:Rs.200</p>
+		<p>CONTACT:<br>+91 9786866658(Panshul O Krishna)</p></div>
+	</div>
+	<div id="e10d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Constrologer</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>This event is designed to challenge students design skills, construction and core knowledge, presentation skills and their time management skills. You need the skills of an architect, smartness of a project manager and wit of a quantity surveyor. The participants will be working in teams of 3-4 and winners will be decided on the basis of questions answered, AutoCAD file submitted, estimation and costing and project schedule.</p><br><br>
+		<p>DATE:15/03/18 and 18/03/18</p>
+		<p>TIME:17:00-17:45 and 14:00-16:00</p>
+		<p>VENUE:MB210 and CDMM201</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 9597999703(Govind)</p></div>
+	</div>
+	<div id="e11d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Cadathon</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p> Infrastructural design is not just about making fancy line plans and sketches- it is about pictorially representing a vision in the most minimalistic yet effective way. AutoCAD is such a software, powered by Autodesk, which gives engineers this graphic power and acts as the perfect paintbrush to our master plans. CAD-a-thon is an event which aims at familiarising the participants towards the many techniques of AutoCAD that can be used to bring our 2-D and 3-D designs to life and then putting our technical and aesthetic sense to the test by then hosting a competition for the same, this putting the skills taught to good use. This event is planned in such an elaborate and student-friendly manner that each participant will leave the event with a sound expertise in this one-stop software.</p><br><br>
+		<p>DATE:17th and 18th March, 2018</p>
+		<p>TIME:20:00 - 08:00</p>
+		<p>REGISTRATION FEES:Rs.100</p>
+		<p>CONTACT:<br>+91 7972431871(Sanket Kapse)</p></div>
+	</div>
+	<div id="e12d" class="evt-det animated" style="display:none;">
+	<i class="fa fa-remove"></i>
+		<br><br><br>
+		<h1>Jenga</h1>
+		<br><br><br>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+		<p>When you have confidence, you can have a lot of fun. And when you have fun, you can do amazing things. A game demanding a touch of luck, skill and brilliance. This game focuses on balancing of the structure which is built by wooden blocks. What makes this event different from the normal Jenga we experienced is it's size. It's a huge structure that can stand up to approx 7 feet. The blocks carry points according to their respective position. The task is to slide out the blocks one by one which can be carried out in teams of 2-4 as well as individually. </p><br><br>
+		<p>DATE:16th and 17th March,2018</p>
+		<p>TIME:9:00-17:00</p>
+		<p>VENUE:FOODYS</p>
+		<p>REGISTRATION FEES:Rs.50</p>
+		<p>CONTACT:<br>+91 9494849075(Raja)</p></div>
+	</div>
+	<div class="row">
+	<div class="content content-background col-xs-12">
+	<div class="altr"></div>
+	<p>Events</p>
+	<p>"Winners are not people who never fail, but people who never quit."</p>
+	</div>
+	</div>
+	<div style="margin:20px 0px;" class="row">
+	<div class=" cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInLeft" data-wow-duration="0.7s">
+	<div class="col-xs-12 events"  id="evt1">
+	<p>
+		Have you ever known how pure is the water coming in your households, offices etc.? Have you ever desired of making a plan, process efficient enough to remove unwanted particles and judge the quality of water? We provide you a platform to complete one on your own and compete with best minds across the country.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border">
+	<br>
+	<p style="text-align:center;font-size:20px;"><b>Envocist</b></p></div>
+	</div>
+	<div class=" cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInRight" data-wow-duration="0.7s">
+	<div class="col-xs-12 events"  id="evt2">
+	<p>
+		How about mixing the game of deductions and mysteries with the field of civil engineering? Doesn’t it sound exciting? We give you a chance to demonstrate the inner Sherlock in you and win big! Can it get more fascinating?
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size:20px;"><b>Fresh More Challenges</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3 wow slideInLeft" data-wow-duration="0.7s">
+	<div class="col-xs-12 events"  id="evt3">
+	<p>
+			A challenge for students who think they have acquired the fundamentals of civil engineering. Different rounds, different challenges testing the civil engineer in you.cross the country.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center; font-size: 20px;"><b>Quiz Bowl</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3 wow slideInRight" data-wow-duration="0.7s" >
+	<div class="col-xs-12 events " id="evt4">
+	<p>
+		Consider yourself a baseball freak? Strong technical skills in the field of civil engineering? You have a good shot at winning this challenge. Have a go at one of the rare events where you have to be sporty and geeky at the same time!
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Concrete Baseball Bat</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInLeft" data-wow-duration="0.7s" >
+	<div class="col-xs-12 events" id="evt5">
+	<p>
+		We, the civil engineers are always judged by the marks we score in Surveying. So do you think you are the best in the country? Need a platform to prove yourself? We provide you exhaustive rounds of hardcore surveying, which will test even the best of the people. Are you ready to take the challenge? We wait.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Surveyor Challenge</b></p>
+	</div>
+	</div>
+<!-- 	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3 wow slideInRight" data-wow-duration="0.7s">
+	<div class="col-xs-12 events" id="evt6">
+	<p>
+		You are the only civil engineer who has been sent to mars to help design structures. Emerge a hero and help the world fight this crisis, with challenges like alien surroundings, no connectivity etc. Then we provide the opportunity, show us your intellect.
+	</p>
+	</div>
+	<div class="col-xs-12"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Sustainable Design Challenge</b></p>
+	</div> -->
+	<!-- </div> -->
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInRight" data-wow-duration="0.7s" >
+	<div class="col-xs-12 events" id="evt7">
+	<p>
+		An opportunity to show your innovative minds, a challenge of building a bridge without cement! A budding civil engineer here’s your chance to prove how technically sound you’re and lots of goodies to be won.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Arch Bridge</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInLeft" data-wow-duration="0.7s">
+	<div class="col-xs-12 events"  id="evt8">
+	<p>
+		Upset with the traffic and road infrastructure of your city. Want to present your ideas to the whole world to make it better. We give you a chance, to design your own traffic and road layout for your own city and a chance to win big!
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Traffineer 1.0</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3  wow slideInRight" data-wow-duration="0.7s" >
+	<div class="col-xs-12 events"  id="evt9">
+	<p>
+		An opportunity to showcase your expertise in the vast array of topics. We give you the topic, write about it, present in front of professionals from the industry. High end exposure, prizes await and what not. Have you heard of any better opportunity? *GEEK ALERT*
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Mead Paper</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3 wow slideInLeft" data-wow-duration="0.7s">
+	<div class="col-xs-12 events "  id="evt10">
+	<p>
+		Are you a good leader? Can you handle pressure? No, we are not recruiting new captain for Indian Cricket Team. You need to have these qualities and much more to be an entrepreneur in this part of engineering. Are you confident enough to stake your claim in a first of its kind event and compete with the world? We assure you won’t have a better experience than this.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Constrologer</b></p>
+	</div>
+	</div>
+	<div class="cd col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3 wow slideInRight" data-wow-duration="0.7s">
+	<div class="col-xs-12 events "  id="evt11">
+	<p>
+		Digital design is like a painting, except the paint never dries". AutoCAD is a software widely used by engineers across the world to put their ideas into motion by picturising them through its many functions. CAD-a-thon is an event which combines workshop teaching as well as competitive participation, giving you a wholesome knowledge and expertise towards this multipurpose software.
+	</p>
+	</div>
+	<div class="col-xs-12 box-border"><br>
+	<p style="text-align:center;font-size: 20px;"><b>Cadathon</b></p>
+	</div>
+	</div>
+	<div class="col-xs-12" style="display:flex;justify-content:center;">
+		<div class="cd col-xs-10 col-sm-3 wow slideInUp" data-wow-duration="0.7s">
+		<div class="col-xs-12 events "  id="evt12">
+		<p>
+			This Reviera team ASCE brings out a game experience that combines friends, both physical and menta skill, suspense, laughter, and maybe a little luck, the most popular and thrilling 'Jenga reloaded'. Grab the opportunity to have real fun as as possible. Do register now!		</p>
+		</div>
+		<div class="col-xs-12 box-border"><br>
+		<p style="text-align:center;font-size: 20px;"><b>Jenga</b></p>
+		</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- Footer -->
+  <footer class="row">
+    <div class="col-xs-12">
+      <a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <br>
+    </div>
+    <div  class="col-xs-12" style="bottom:20px;position:absolute;">
+      <p id="legal">All rights reserved &copy; 2018</p>
+    </div>
+  </footer>
+</body>
+<script>
+$(window).load(function(){
+  $(".preloader").fadeOut(500);
+});
+$(document).ready(function()
+{
+	var contentHeight=$(".content").height();
+	// $(window).scroll(function(){
+	// var x=$(window).scrollTop();
+	// if(x>=contentHeight)
+	//   {
+	//     $(".header").css({backgroundColor:"white",boxShadow:"3px 3px 2px 2px grey"});
+	//     $(".ham i").css({color:"black"});
+	//   }
+	// else
+	//   {
+	//     $(".header").css({backgroundColor:"transparent",boxShadow:"none"});
+	//     $(".ham i").css({color:"white"});
+	//   }
+	// });
+	$(".events").click(function(){$(".evt-det").addClass("zoomIn");});
+	$(".content").fadeIn(600);
+	$("#evt1").hover(function(){
+		$("#evt1 p").fadeIn(500);
+	},function(){
+		$("#evt1 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e1d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt-det i").click(function(){$("evt-det").css("display","none");});
+	$("#evt2").hover(function(){
+		$("#evt2 p").fadeIn(500);
+	},function(){
+		$("#evt2 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e2d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});;
+	$("#evt3").hover(function(){
+		$("#evt3 p").fadeIn(500);
+	},function(){
+		$("#evt3 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e3d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt4").hover(function(){
+		$("#evt4 p").fadeIn(500);
+	},function(){
+		$("#evt4 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e4d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt5").hover(function(){
+		$("#evt5 p").fadeIn(500);
+	},function(){
+		$("#evt5 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e5d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt6").hover(function(){
+		$("#evt6 p").fadeIn(500);
+	},function(){
+		$("#evt6 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e6d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt7").hover(function(){
+		$("#evt7 p").fadeIn(500);
+	},function(){
+		$("#evt7 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e7d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt8").hover(function(){
+		$("#evt8 p").fadeIn(500);
+	},function(){
+		$("#evt8 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e8d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt9").hover(function(){
+		$("#evt9 p").fadeIn(500);
+	},function(){
+		$("#evt9 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e9d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt10").hover(function(){
+		$("#evt10 p").fadeIn(500);
+	},function(){
+		$("#evt10 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e10d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt11").hover(function(){
+		$("#evt11 p").fadeIn(500);
+	},function(){
+		$("#evt11 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e11d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+	$("#evt12").hover(function(){
+		$("#evt12 p").fadeIn(500);
+	},function(){
+		$("#evt12 p").fadeOut(500);
+	}).on("click",function(){
+		$("#e12d").css("display","block").click(function(){$(this).css("display","none");$("body").css("overflowY","scroll");});
+		$("body").css("overflowY","hidden");
+	});
+});
+</script>
+</html>

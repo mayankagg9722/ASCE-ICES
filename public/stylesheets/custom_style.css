@@ -1,0 +1,389 @@
+/*@font-face {
+    font-family: Monsterrat;
+    src: url('../fonts/Monsterrat');
+}*/
+body
+{
+  margin:0px;
+  padding:0px;
+  overflow-x:hidden;
+  position:relative;
+  -ms-overflow-style:none;
+}
+a
+{
+  text-decoration:none;
+}
+a:hover
+{
+  text-decoration:none;
+}
+.altr
+{
+  width:100vw;
+}
+.underline
+{
+  text-decoration: underline;
+}
+.row
+{
+  margin:0px;
+  padding:0px;
+}
+[class*="col-"]
+{
+  padding:0px;
+}
+::-webkit-scrollbar
+{
+  display: none;
+}
+/*.box-border
+{
+  border:1px solid black;
+  border-top: 0px;
+}*/
+#overlay
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:11;
+  display:none;
+  transition:all 0.5s;
+}
+.sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    text-align:center;
+    display:block;
+    background-color: #e7e7e7; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition:all 0.5s; 
+}
+.sidenav .closebtn,.sidenav .close:hover
+{
+  cursor:pointer;
+  color:black;
+  background-color:transparent !important;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color:#efefef;
+    background-color:#111;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*Navbar*/
+
+.nav-style
+{
+  display:flex;
+  justify-content: space-between;
+  padding-right:50px;
+  margin-top:30px;
+  margin-bottom:20px;
+}
+.altr
+{
+  margin-top:20px;
+  margin-bottom: 1.5%;
+}
+.ham
+{
+  text-align: center;
+}
+.ham i
+{
+  font-size: 30px;
+  color:#222;
+  padding-bottom: 4px;
+}
+.ham i:hover
+{
+  cursor:pointer;
+}
+/*.header
+{
+  padding-top:1%;
+  margin-bottom:1.5%;
+  position:fixed;
+  z-index:10;
+  background-color: transparent;
+}*/
+.asce-logo
+{
+  text-align:center;
+  float:right;
+  padding-bottom: 10px;
+}
+.pc-asce-logo
+{
+  margin:10px 0px;
+  text-align:center;
+}
+.pc-header a
+{
+  text-decoration: none;
+  color:white;
+}
+.pc-header a:hover
+{
+  text-decoration: none;
+  color:cyan;
+}
+.pc-header
+{
+  position: fixed;
+  z-index:10;
+  margin-top:25px;
+  text-align: center;
+  color:white;
+  background-color:transparent;
+  display:block;
+}
+.asce-logo img,.pc-asce-logo img
+{
+  height:30%;
+  width:50%;
+}
+
+.mobile-header
+{
+  padding-top:20px;
+  display:none;
+  position:fixed;
+  z-index:10;
+}
+.nav-style p
+{
+  margin:5px 0px;
+}
+#color
+{
+  color:#1C768A;
+}
+.content
+{
+  display: none;
+  height:55vh;
+  color:black;
+  text-align:center;
+  background-attachment: fixed;
+}
+
+/*Events Content*/
+
+.cd
+{
+  box-shadow:3px 3px 7px 3px grey;
+  margin-bottom:20px;
+}
+.cd
+{
+  cursor:pointer;
+}
+.events
+{
+  height:40vh;
+  text-align:center;
+}
+.events p
+{
+  display: none;
+  color:white;
+  height:40vh;
+  background-color:#121;
+  opacity:0.8;
+  padding:20px;
+  letter-spacing:1.2px;
+}
+.evt-det
+{
+  overflow-y:auto;
+  position:fixed;
+  z-index:20;
+  background-color: black;
+  opacity:0.92;
+  height:100vh;
+  width:100vw;
+  text-align:center;
+  text-orientation: justify;
+  padding:30px;
+}
+.evt-det h1
+{
+  color:white;
+  font-weight: lighter;
+  font-size: 55px;
+  letter-spacing:4px;
+}
+.evt-det p
+{
+  color:white;
+  font-size:17px;
+  letter-spacing: 2px;
+}
+.evt-det i
+{
+  color:white;
+  float:right;
+  margin:5px;
+  font-size: 20px;
+}
+.evt-det i:hover
+{
+  cursor:pointer;
+  color:red;
+}
+
+/*Workshop Content*/
+.top-pad
+{
+  padding-top:30px;
+}
+.cards
+{
+  margin-top:5%;
+  box-shadow:2px 2px 2px 2px grey;
+}
+.workshop
+{
+  padding: 10px;
+  text-align: center;
+}
+.abc
+{
+  margin-bottom:5%;
+}
+.workshop-icon
+{
+  background-color: #e2e2e2;
+}
+/*Footer*/
+
+footer
+{
+  background-color:#e7e7e7;
+  text-align:center;
+  height:20vh;
+  position:relative;
+  padding-top:30px !important;
+}
+footer i
+{
+  color:black;
+  margin:10px;
+  font-size:30px !important;
+}
+
+@media only screen and (max-width:991px)
+{
+  .workshop-icon
+  {
+    background-color: white;
+  }
+  .pc-header
+  {
+    display:none;
+  }
+  .mobile-header
+  {
+    background-color:#ffffff;
+    border-bottom:1px solid #e7e7e7;
+    /*display:block;*/
+  }
+  .ham i
+  {
+    font-size:20px;
+  }
+  .asce-logo img
+  {
+    height:30%;
+    width:60%;
+  }
+
+
+  .content
+  {
+    padding-top:10px;
+    height:30vh;
+  }
+  .content p:nth-child(2)
+  {
+  font-size:40px;
+  }
+  .content p:nth-child(3)
+  {
+  font-size:15px;
+  }
+  .events
+  {
+    height:30vh;
+  }
+  .events p
+  {
+    overflow-y:auto;
+    height:30vh;
+  }
+  .evt-det
+  {
+    overflow-y: scroll;
+  }
+  .evt-det h1
+  {
+  color:white;
+  font-weight: lighter;
+  font-size: 35px;
+  letter-spacing:4px;
+  }
+
+  .workshop h3
+  {
+    text-align:center;
+    font-size:18px;
+  }
+  .workshop
+  {
+    text-align:justify;
+  }
+  .cards img
+  {
+    height:25vh;
+  }
+}
+@media only screen and (min-width:992px) and (max-width:1200px)
+{
+  .content
+  {
+    padding-top:10px;
+    height:30vh;
+  }
+}

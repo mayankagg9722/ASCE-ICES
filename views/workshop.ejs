@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Workshops</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="Anant Kakrania">
+
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+<link rel="stylesheet" href="/stylesheets/custom_style.css"/>
+<!-- <link rel="stylesheet" href="navbar.css"/> -->
+<link rel="stylesheet" href="/stylesheets/header.css"/>
+<script src="/javascripts/jQuery.js"></script>
+<script src="/javascripts/wow.min.js"></script>
+<script src="/javascripts/side-nav.js" defer></script>
+<script src="/javascripts/navbar-fn.js" defer></script>
+<script type="text/javascript">
+	new WOW().init();
+</script>
+</head>
+<style type="text/css">
+*
+{
+  font-family: 'Questrial', sans-serif;
+}
+.content-background
+{
+  background:url("/images/workshop.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.preloader
+{
+  height:100vh;
+  width:100vw;
+  background-color: black;
+  position:fixed;
+  z-index:99999;
+}
+.preloader div
+{
+  text-align:center;
+  z-index:100000;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+</style>
+<body>
+  <div class="preloader">
+    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+  </div>
+   <div id="overlay" onclick="closeNav()"></div>
+  <div id="mySidenav" class="sidenav">
+    <i class="closebtn" onclick="closeNav()">&times;</i>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+    <a href="/conference"  onclick="closeNav()">Conference</a>
+    <a href="/workshop" onclick="closeNav()">Workshop</a>
+    <a href="/events" onclick="closeNav()">Events</a>
+    <a href="/register" onclick="closeNav()">Register</a>
+    <a href="/login" onclick="closeNav()"><%=option%></a>
+  </div>
+  <div class="mobile-header col-xs-12 row">
+    <div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+    <div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+  </div>
+  <div class="pc-header col-sm-12 row">
+    <div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+    <div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:20px;margin-bottom:20px;">
+      <p><a href="/">Home</a></p>
+      <p><a href="/conference">Conference</a></p>
+      <p><a href="/canoe">Canoe Competition</a></p>
+      <p><a href="/events">Events</a></p>
+      <p><a href="/workshop">Workshop</a></p>
+      <p><a href="/login"><%=option%></a></p>
+    </div>
+  </div>
+		<div class="row">
+	<div class="content content-background col-xs-12">
+	<div class="altr"></div>
+	<p>Workshops</p>
+	<p>"Sometimes the smallest step in the right direction ends up being the biggest step of your life. Tip Toe if you must, but take the step."</p>
+	</div>
+	</div>
+
+	<div class="row abc">
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w6.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ADVANCED FOUNDATION ANALYSIS</h3>
+	<p>You can’t build a great building on a weak foundation. There lies some challenges involved in analyzing a structure even before the construction starts.So we are giving you the opportunity to attend a workshop on advanced foundation analysis. The workshop deals with analysis and design of different footing and theory of structure via real world case studies etc.<br>Date:18/03/2018<br>Time:10:00-17:00<br>Venue:MB210<br>Registration Fees:Rs.600<br>Contact:7972431871(Sanket Kapse)<br></p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInLeft col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w1.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ADVANCED CONCRETE TECHNOLOGY</h3>
+	<p>Premature deterioration of civil infrastructure has created a colossal backlog of ageing concrete structures. Hence it is important to design structures that can excel their service life even in harsh environments and with minimum maintenance and repair. This however requires a solid understanding of concrete technology.<br>Date:16/03/2018<br>Time:10:00-17:00<br>Venue:TT Gallery<br>Registration Fees:Rs.600<br>Contact:7530003328(Rounak Singh)<br></p>
+	</div>
+	</div>
+
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" id="BA" data-wow-duartion="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w2.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>BENTLEY ARCHITECTURE</h3>
+	<p>As an architectural engineer, you need to deliver the highest quality work on schedule and under budget. Bentley architecture provides you with endless independence, to discover a lot more layout choices, to help make much better well informed layout judgements, as well as forecast performance and costs. Construction and Design paperwork are quickly synchronized, removing problems and omissions with the help of the software.<br>Date:16/03/2018<br>Time:10:00-17:00<br>Venue:SMART CLASS<br>Registration Fees:Rs.600<br>Contact:7389956959(Vipul Singh)<br></p>
+	</div>
+	</div>
+
+
+	<div class="cards wow slideInLeft col-xs-offset-1 col-xs-10" id="SP" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon top-pad">
+	<img width="100%" src="../images/workshops/w4.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>STAAD-PRO</h3>
+	<p>STAAD-PRO V8i is a Structural Analysis and Design Software powered by Bentley systems. With an array of advanced analysis capabilities including linear static, response spectra, time history, cable imperfection, and non-linear analysis , it provides a callable solution that will meet the demands of the project every time. The software reduces the man-hours required to properly load the structure by automating the forces caused by wind, earthquakes, snow or vehicles. The workshop is conducted by the creators themselves, ‘Bentley systems’ which makes the learning experience like never before, it aims at  ensuring on time and on budget completion of your steel, concrete, timber, aluminium, and cold-formed steel projects regardless of the complexity.<br>Date:17/03/2018<br>Time:10:00-17:00<br>Venue:MB210<br>Registration Fees:Rs.600<br> Contact:9791555413(Mudit Mishra)<br></p>
+	</div>
+	</div>
+
+<!-- 
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s" >
+	<div class="col-xs-12 col-md-3">
+	<img width="100%" src="../images/workshops/png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ARCHITECTURE DESIGN EVENT</h3>
+	<p>Architecture Design Event is an architectural design competition meant for Civil Engineering and Architecture Students. All participants will be given a Design Problem Statement to work on. It is a perfect platform to unleash your talents and interests as well as explore your capabilities. They have to study, solve, calculate and work on the design and present a technically sound product which should be aesthetically pleasing, feasible to build and reliable as well. Architecture Design Event tests not just the creativity but the technical knowledge and engineering expertise of the participants as well. Participants will also be gauged on the understanding of their project feasibility and the provision of practical solutions.</p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s" >
+	<div class="col-xs-12 col-md-3">
+	<img width="100%" src="../images/bg4.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ARCHITECTURE DESIGN EVENT</h3>
+	<p>Architecture Design Event is an architectural design competition meant for Civil Engineering and Architecture Students. All participants will be given a Design Problem Statement to work on. It is a perfect platform to unleash your talents and interests as well as explore your capabilities. They have to study, solve, calculate and work on the design and present a technically sound product which should be aesthetically pleasing, feasible to build and reliable as well. Architecture Design Event tests not just the creativity but the technical knowledge and engineering expertise of the participants as well. Participants will also be gauged on the understanding of their project feasibility and the provision of practical solutions.</p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s" >
+	<div class="col-xs-12 col-md-3">
+	<img width="100%" src="../images/bg4.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ARCHITECTURE DESIGN EVENT</h3>
+	<p>Architecture Design Event is an architectural design competition meant for Civil Engineering and Architecture Students. All participants will be given a Design Problem Statement to work on. It is a perfect platform to unleash your talents and interests as well as explore your capabilities. They have to study, solve, calculate and work on the design and present a technically sound product which should be aesthetically pleasing, feasible to build and reliable as well. Architecture Design Event tests not just the creativity but the technical knowledge and engineering expertise of the participants as well. Participants will also be gauged on the understanding of their project feasibility and the provision of practical solutions.</p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s" >
+	<div class="col-xs-12 col-md-3">
+	<img width="100%" src="../images/bg4.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>ARCHITECTURE DESIGN EVENT</h3>
+	<p>Architecture Design Event is an architectural design competition meant for Civil Engineering and Architecture Students. All participants will be given a Design Problem Statement to work on. It is a perfect platform to unleash your talents and interests as well as explore your capabilities. They have to study, solve, calculate and work on the design and present a technically sound product which should be aesthetically pleasing, feasible to build and reliable as well. Architecture Design Event tests not just the creativity but the technical knowledge and engineering expertise of the participants as well. Participants will also be gauged on the understanding of their project feasibility and the provision of practical solutions.</p>
+	</div>
+	</div>
+ -->
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10"  id="FC" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w3.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>FLOATING CONCRETE</h3>
+	<p>This is a workshop cum competition, starting with participants in a team of 5 will be taught how to make a structure using light weight concrete material, coarse aggregates, rubber scrap etc, which will float on water, they will be allowed to make a floating structure in a given time constraint and will be given 1 week time for its proper casting, the structure which will bear the maximum load without sinking will be considered as the best structure. The workshop portrayed a complete practical perspective of the science behind floating concrete that is Light weight concrete.<br>Date:17/03/2018<br>Time:10:00-17:00<br>Venue:TT Gallery<br>Registration Fees:Rs.600<br>Contact:7530000549(Piyush Yadav)<br></p>
+	</div>
+	</div>
+
+
+	<div class="cards wow slideInLeft col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w5.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>TRANSPORTATION ENGINEERING</h3>
+	<p>This modern workshop is a much needed investment for the urbanization of modern age which demands smooth communication by focusing on advanced tools like intelligent transport system. In the workshop students would also be introduced to Traffic engineering- understanding and operation. In this workshop, students would be taught about the scope and oppurtunities of transportation sector in the future. As we know, our prime minister "Dr. Narendra Modi" has announced that transportation sector is the one which requires lots of development and has also invested major chunk of national budget into it. Considering the arrival of "Smart Cities", there would be better roadways, airports and railways system.<br>Date:15/03/2018<br>Time:14:00-18:30<br>Venue:SMART CLASS<br>Registration Fees:Rs.600<br>Contact:9944508082(Anany Tiwari)<br></p>
+	</div>
+	</div>A
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w8.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>REVIT</h3>
+	<p> Revit is building information modeling software for architects, landscape architects, structural engineers, MEP engineers, designers and contractors developed by Autodesk. It allows users to design a building and structure and its components in 3D, annotate the model with 2D drafting elements, and access building information from the building model's database. Revit is 4D BIM capable with tools to plan and track various stages in the building's lifecycle, from concept to construction and later maintenance and/or demolition.<br>Date:18/03/2018<br>Time:10:00-17:00<br>Venue:GDN153<br>Registration Fees:Rs.600<br>Contact:9786866658(Panshul O Krishna)<br></p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInLeft col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w9.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>SEISMIC DESIGN</h3>
+	<p>Shifting of tectonic plates is natural but this activity causes damage to both life and property. However, in todays fast moving world, technology has advanced enough to not only repair, but to prevent and to save ourself from such a catastrophe. Thus ASCE-VIT brings you <b>The Seismic Design of Buildings</b> workshop where participants will be thaught how to use Seismic Design principles in the design and construction of structures which can withstand such disasters. This is the perfect platform for enhancement of budding Civil Engineering candidates and widening your perspective in the field of engineering.<br>Date:16/03/2018<br>Time:10:00-17:00<br>Venue:MB210<br>Registration Fees:Rs.1200<br>Contact:7376082670(Ayush Goel)<br></p>
+	</div>
+	</div>
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.7s">
+	<div class="col-xs-12 col-md-3 workshop-icon">
+	<img width="100%" src="../images/workshops/w7.png"></img>
+	</div>
+	<div class="workshop col-xs-12 col-md-9">
+	<h3>TALL BUILDING</h3>
+	<p>This year, we bring to you Tall Building by The American Society of Civil Engineers. The design of tall buildings essentially involves conceptual design, approximate analysis, preliminary design and optimization to safely carry different loads acting on a structure. The structural design for a skyscraper must ensure that the building is able to stand up safely, able to function without excessive deflections or movements which may cause fatigue of structural elements, cracking or failure of fixtures, fittings or partitions, or discomfort for occupants. Tall Building Design Workshop conducted by Civil Simplified primarily aims at educating the participants about analysis and design of tall buildings.tem.<br>Date:17/03/2018<br>Time:10:00-17:00<br>Venue:SMART CLASS<br>Registration Fees:Rs.1200<br>Contact:8449836567(Chetna Bisht)<br></p>
+	</div>
+	</div>
+	</div>
+
+	<!-- Footer -->
+  <footer class="row">
+    <div class="col-xs-12">
+      <a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <br>
+    </div>
+    <div  class="col-xs-12" style="bottom:20px;position:absolute;">
+      <p id="legal">All rights reserved &copy; 2018</p>
+    </div>
+  </footer>
+
+</body>
+<script>
+$(window).load(function(){
+  $(".preloader").fadeOut(500);
+});
+$(document).ready(function()
+{
+	var contentHeight=$(".content").height();
+	// $(window).scroll(function(){
+	// var x=$(window).scrollTop();
+	// if(x>=contentHeight)
+	//   {
+	//     $(".header").css({backgroundColor:"white",boxShadow:"3px 3px 2px 2px grey"});
+	//     $(".ham i").css({color:"black"});
+	//   }
+	// else
+	//   {
+	//     $(".header").css({backgroundColor:"transparent",boxShadow:"none"});
+	//     $(".ham i").css({color:"white"});
+	//   }
+	// });
+	$(".content").fadeIn(1000);
+	var w=$(window).width();
+	var i=1;
+	if(w>991)
+	{
+	for(;i<=9;i++)
+	{
+	var h=$(".abc :nth-child("+i+")").height();
+	// console.log(h);
+	if(i===2) 
+		h=h+20;
+	$(".abc :nth-child("+i+") img").css("height",h+'px');
+	}
+	$("#BA img").css("height",$("#BA").height()+'px');
+	$("#SP img").css("height",$("#SP").height()+'px');
+	$("#FC img").css("height",$("#FC").height()+'px');	
+	}
+});
+</script>
+</html>

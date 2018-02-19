@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Conference</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="ASCE">
+
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+
+<link rel="stylesheet" href="/stylesheets/custom_style.css"/>
+<link rel="stylesheet" href="/stylesheets/header.css"/>
+
+<script src="/javascripts/jQuery.js"></script>
+<script src="/javascripts/wow.min.js"></script>
+
+<script src="/javascripts/side-nav.js"></script>
+<script src="/javascripts/navbar-fn.js"></script>
+</head>
+<script>
+new WOW().init();
+</script>
+<style type="text/css">
+*
+{
+	font-family: 'Questrial', sans-serif;
+}
+ .preloader
+{
+  height:100vh;
+  width:100vw;
+  background-color: black;
+  position:fixed;
+  z-index:99999;
+}
+.preloader div
+{
+  text-align:center;
+  z-index:100000;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.content-background
+{
+  background:url("/images/conference.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.cards
+{
+  margin-top:5%;
+  box-shadow:2px 2px 2px 2px grey;
+}
+.workshop
+{
+  text-align:center;
+  padding: 10px;
+}
+.workshop p
+{
+  line-height:2;
+  letter-spacing:1px;
+  font-size:15px;
+}
+@media only screen and (max-width:1100px)
+{
+/*  .content p:nth-child(2)
+  {
+    font-size: 30px;
+  }*/
+  .workshop h3
+  {
+    font-size:18px;
+  }
+  .workshop
+  {
+    text-align:justify;
+  }
+  .cards img
+  {
+    height:25vh;
+  }
+}
+</style>
+<body>
+      <div class="preloader">
+        <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+      </div>
+   <div id="overlay" onclick="closeNav()"></div>
+  <div id="mySidenav" class="sidenav">
+    <i class="closebtn" onclick="closeNav()">&times;</i>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+    <a href="/conference"  onclick="closeNav()">Conference</a>
+    <a href="/workshop" onclick="closeNav()">Workshop</a>
+    <a href="/events" onclick="closeNav()">Events</a>
+    <a href="/register" onclick="closeNav()">Register</a>
+    <a href="/login" onclick="closeNav()"><%=option%></a>
+  </div>
+  <div class="mobile-header col-xs-12 row">
+    <div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+    <div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+  </div>
+  <div class="pc-header col-sm-12 row">
+    <div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+    <div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:20px;margin-bottom:20px;">
+      <p><a href="/">Home</a></p>
+      <p><a href="/conference">Conference</a></p>
+      <p><a href="/canoe">Canoe Competition</a></p>
+      <p><a href="/events">Events</a></p>
+      <p><a href="/workshop">Workshop</a></p>
+      <p><a href="/login"><%=option%></a></p>
+    </div>
+  </div>
+
+<section id="conference" class="row">
+	<div class="content content-background col-xs-12">
+		<div class="altr"></div>
+		<p>Conferences</p>
+		<p>"If opportunity doesn't knock, build a door"</p>
+	</div>
+
+	<div class="cards wow slideInRight col-xs-offset-1 col-xs-10" data-wow-duration="0.9s">
+		<div class="workshop">
+		<h3><span id="color">NATIONAL</span> CONFERENCE</h3>
+		<p>The ASCE national conference was the first national conference in the United States. The American Society of Civil Engineers represents more than 150,000 members of the civil engineering profession in 177 countries. ASCE Student Chapters are the organizers of 18 prestigious conferences that are held in different regions every year in USA. It is for the very first time that India has been privileged to be a part of this extravagant event to hold this conference. It is to be held in Vellore Institute of Technology which will include a cluster of assorted events like Mead Paper, Business Meet, and Canoe Competition etc.</p>
+		</div>
+	</div>
+
+	<div style="margin-bottom:5%;" class="cards wow slideInLeft col-xs-offset-1 col-xs-10" data-wow-duartion="0.9s">
+		<div class="workshop">
+		<h3><span id="color">ICES</span> CONFERENCE</h3>
+		<p>International Civil Engineering Symposium (ICES),is a yearly specialized fest of the Vellore Institute of Technology. It is a symposium typically held amid the long stretch of March each year. ICES organized by ASCE-VIT (in a joint effort with the American Society of Civil Engineers India segment) of VIT University is one of the largest get-together of Civil Engineers from all of India and abroad.</p><br>
+		<p>Events which rack your brain and takes you to a whole new level, workshops which will sweat information out of you, guest lecturers from an array of highly decorated personalities, unconventional MUN’s and many others, await. We have a gala planned out for you. First and foremost, we have the brightest minds of our country, from various fields of engineering, coming over to deliver their bountiful wisdom in guest lectures. An opportunity like that is not something you would come across every day!We have paper presentations on fields which cover Geotechnical, Environmental, Transportation and Structural. Papers are invited from all over the continent, without compromising on class and quality. Arrays of never before seen events which will make your civil engineering fantasies go wild. We are planning an all-round exhibition of models by students. This showcase is guaranteed to transport you to a whole different place where you’ll witness the most innovative and creative models made by students.</p>
+		</div>
+	</div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="row">
+    <div class="col-xs-12">
+      <a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <br>
+    </div>
+    <div  class="col-xs-12" style="bottom:20px;position:absolute;">
+      <p id="legal">All rights reserved &copy; 2018</p>
+    </div>
+  </footer>
+</body>
+<script>
+      $(window).load(function(){
+      $(".preloader").fadeOut(500);
+      }); 
+$(document).ready(function()
+{
+	$(".content").fadeIn(600);
+});
+</script>
+</html>

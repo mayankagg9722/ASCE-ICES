@@ -1,0 +1,27 @@
+{
+  "name": "ascebackend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.15.2",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.2.0",
+    "dotenv": "^4.0.0",
+    "ejs": "~2.5.2",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "mongo-xlsx": "^1.0.12",
+    "mongoose": "^5.0.3",
+    "morgan": "^1.7.0",
+    "nodemailer": "^4.4.2",
+    "path": "^0.12.7",
+    "promise": "^8.0.1",
+    "request": "^2.83.0",
+    "serve-favicon": "^2.3.2"
+  }
+}

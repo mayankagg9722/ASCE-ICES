@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile</title>
+
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="about ASCE 2018">
+		<meta name="author" content="ASCE">
+
+		<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+		
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+		<link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+		<link rel="stylesheet" href="/stylesheets/mylogin-style.css"/>
+
+		<style>
+			*
+			{
+				font-family: 'Questrial', sans-serif;
+			}
+			.preloader
+			{
+			  top:0;
+			  height:100vh;
+			  width:100vw;
+			  background-color: black;
+			  position:fixed;
+			  z-index:99999;
+			}
+			.preloader div
+			{
+			  text-align:center;
+			  z-index:100000;
+			  position: absolute;
+			  top:50%;
+			  left:50%;
+			  transform:translate(-50%,-50%);
+			}
+			.container {
+			  position: relative;
+			  width: 100%;
+			}
+
+			.s-overlay {
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  right: 0;
+			  background-color: #e7e7e7;
+			  overflow: hidden;
+			  width: 100%;
+			  height: 0;
+			  transition: .5s ease;
+			}
+
+			.container:hover .s-overlay {
+			  height: 100%;
+			}
+
+			.text {
+			  color: black;
+			  font-size: 18px;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  -ms-transform: translate(-50%, -50%);
+			  text-align: center;
+			}
+		</style>
+
+		<script src="/javascripts/jQuery.js"></script>
+		<script src="/javascripts/wow.min.js"></script>
+		
+		<script src="../javascripts/side-nav.js"></script>
+<!--     <script src="../javascripts/navbar-fn.js" defer></script> -->
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+	</head>
+	<body>
+	  <div class="preloader">
+    	<div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+  	  </div>
+		<div id="overlay" onclick="closeNav()"></div>
+	<div id="mySidenav" class="sidenav">
+		<i class="closebtn" onclick="closeNav()">&times;</i>
+		<a href="/" onclick="closeNav()">Home</a>
+		<a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+		<a href="/conference"  onclick="closeNav()">Conference</a>
+		<a href="/workshop" onclick="closeNav()">Workshop</a>
+		<a href="/events" onclick="closeNav()">Events</a>
+		<a  onclick="logOut()">Signout</a>
+		<a  href="/mycart" ><i class="fa fa-shopping-cart"></i></a>
+	</div>
+	<div class="mobile-header col-xs-12 row">
+		<div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+		<div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+	</div>
+	<div class="pc-header col-sm-12 row">
+		<div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+		<div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:30px;margin-bottom:20px;">
+			<p><a href="/">Home</a></p>
+			<p><a href="/conference">Conference</a></p>
+			<p><a href="/canoe">Canoe Competition</a></p>
+			<p><a href="/events">Events</a></p>
+			<p><a href="/workshop">Workshop</a></p>
+			<p><a onclick="logOut()">Signout</a></p>
+			<p><a href="/mycart"><i class="fa fa-shopping-cart"></i></a></p>
+		</div>
+	</div>
+		<div class="altr"></div>
+		<div class="content row">
+			<div class="menu-wrapper col-xs-12 col-sm-12">
+				<div class="col-xs-12 col-sm-3 col-lg-2 item-type" id="events" style="position:relative;background-color:#e7e7e7;">
+					<div class="div-center">
+						<h2>Events</h2>
+					</div>
+				</div>
+				<ul class="menu menu-event col-xs-12 col-sm-9 col-lg-10 row">
+					<li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/1.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 9:00-12:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Freshmore Challenge</h5>
+						<div class="col-xs-12"><button type="button" id="freshMoreChallenge">Add To Cart</button></div>
+						<h5 id="e-msg1"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/9.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018<br>
+Time: 14:00-16:00<br>
+Registration Fees: Rs.100<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Envocist</h5>
+						<div class="col-xs-12"><button type="button" id="envocist">Add To Cart</button></div>
+						<h5 id="e-msg2"></h5>
+					</li>  
+					<li class="item col-xs-6 col-sm-5  col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/2.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 10:00-12:00<br>
+Registration Fees: Rs.200<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Mead Paper</h5>
+						<div class="col-xs-12"><button type="button" id="meadPaper">Add To Cart</button></div>
+						<h5 id="e-msg3"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/11.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018 - 17/03/2018<br>
+Time: 9:00-17:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Jenga</h5>
+						<div class="col-xs-12"><button type="button" id="jenga">Add To Cart</button></div>
+						<h5 id="e-msg4"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/3.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018<br>
+Time: 16:00-18:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div> 
+						<h5 class="col-xs-12">Quiz Bowl</h5>
+						<div class="col-xs-12"><button type="button" id="quizBowl">Add To Cart</button></div>
+						<h5 id="e-msg5"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/4.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 9:00-12:30<br>
+Registration Fees: Rs.100<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Surveyor</h5>
+						<div class="col-xs-12"><button type="button" id="surveyor">Add To Cart</button></div>
+						<h5 id="e-msg5"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/5.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018 - 18/03/2018<br>
+Time: 17:30-18:15 and 14:00-16:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Constrologer</h5>
+						<div class="col-xs-12"><button type="button" id="constrologer">Add To Cart</button></div>
+						<h5 id="e-msg6"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/6.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 14:00-18:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Traffineer</h5>
+						<div class="col-xs-12"><button type="button" id="traffineer">Add To Cart</button></div>
+						<h5 id="e-msg7"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/7.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 14:00-16:00<br>
+Registration Fees: Rs.100<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Concrete Baseball Bat</h5>
+						<div class="col-xs-12"><button type="button" id="concreteBaseballBat">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/8.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018 - 16/03/2018<br>
+Time: 10:00-17:00<br>
+Registration Fees: Rs.50<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Arch Bridge</h5>
+						<div class="col-xs-12"><button type="button" id="archBridge">Add To Cart</button></div>
+						<h5 id="e-msg8"></h5>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/events-login/10.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 17/03/2018 - 18/03/2018<br>
+Time: 20:00-8:00<br>
+Registration Fees: Rs.100<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Cadatahon</h5>
+						<div class="col-xs-12"><button type="button" id="cadatahon">Add To Cart</button></div>
+						<h5 id="e-msg9"></h5>
+					</li>         
+				</ul>
+
+				<div class="paddles">
+					<button class="left-paddle-event paddle hidden">
+						<
+					</button>
+					<button class="right-paddle-event paddle">
+						>
+					</button>
+				</div>
+
+			</div>
+			<div class="menu-wrapper col-xs-12 col-sm-12">
+				<div class="col-xs-12 col-sm-3 col-lg-2 item-type" id="workshops" style="position:relative;background-color:#e7e7e7;">
+					<div class="div-center">
+						<h2>Workshops</h2>
+					</div>
+				</div>
+				<ul class="menu menu-workshop col-xs-12 col-sm-9 col-lg-10 row">
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/1.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: TT Gallery<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<div class="col-xs-12"><h5>ACT</h5></div>
+						<div class="col-xs-12"><button type="button" id="act">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/2.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: SMART CLASS<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Bentley Architecture</h5>
+						<div class="col-xs-12"><button type="button" id="ba">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/3.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: TT Gallery<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Floating Concrete</h5>
+						<div class="col-xs-12"><button type="button" id="floatingConcrete">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/4.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 18/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: MB210<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">AFA</h5>
+						<div class="col-xs-12"><button type="button" id="afa">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/5.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 17/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: MB210<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">STAAD-PRO</h5>
+						<div class="col-xs-12"><button type="button" id="staadPro">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/6.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 15/03/2018<br>
+Time: 14:00-18:30<br>
+Venue: SMART CLASS<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Transport Engineering</h5>
+						<div class="col-xs-12"><button type="button" id="transportEngineering">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/7.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 16/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: MB210<br>
+Registration Fees: Rs.1200<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Seismic Design</h5>
+						<div class="col-xs-12"><button type="button" id="seismicDesign">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/8.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 17/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: SMART CLASS<br>
+Registration Fees: Rs.1200<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Tall Building</h5>
+						<div class="col-xs-12"><button type="button" id="tallBuilding">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/workshop-login/9.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 18/03/2018<br>
+Time: 10:00-17:00<br>
+Venue: GDN153<br>
+Registration Fees: Rs.600<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Revit</h5>
+						<div class="col-xs-12"><button type="button" id="revit">Add To Cart</button></div>
+					</li>      
+				</ul>
+
+				<div class="paddles">
+					<button class="left-paddle-workshop paddle hidden">
+						<
+					</button>
+					<button class="right-paddle-workshop paddle">
+						>
+					</button>
+				</div>
+
+			</div>
+
+
+			<div class="menu-wrapper col-xs-12 col-sm-12">
+				<!--div class="col-xs-12 col-sm-3 col-lg-2 item-type" id="accomod" style="position:relative;background-color:#e7e7e7;">
+					<div class="div-center">
+						<h2>Extras</h2>
+					</div>
+				</div>
+				<ul class="menu menu-accomod col-xs-12 col-sm-9 col-lg-10 row">
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/Accomodation/1.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Advanced Concrete Technology</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="/images/Accomodation/2.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Bentley Architecture</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="/images/Accomodation/3.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Floating Concrete</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="/images/Accomodation/4.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Advanced Foundation Ananlysis</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="/images/Accomodation/5.png" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Advanced Foundation Ananlysis</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li-->
+					<!-- <li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/workshop-login/5.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">STAAD-PRO</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+						<li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/workshop-login/6.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Transportation Engineering</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/workshop-login/7.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Seismic Design</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/workshop-login/8.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Tall Building</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>
+					<li class="item col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						<div class="item-img" class="col-xs-12">
+							<img src="../images/workship-login/9.jpg" width="100%" height="100%"></img>
+						</div>
+						<h5 class="col-xs-12">Revit</h5>
+						<div class="col-xs-12"><button type="button">Add To Cart</button></div>
+					</li>      
+				</ul>
+
+				<div class="paddles">
+					<button class="left-paddle-accomod paddle hidden">
+						<
+					</button>
+					<button class="right-paddle-accomod paddle">
+						>
+					</button>
+				</div-->
+
+			</div>
+			<div class="menu-wrapper col-xs-12 col-sm-12">
+				<div class="col-xs-12 col-sm-3 col-lg-2 item-type" id="canoe" style="position:relative;background-color:#e7e7e7;">
+					<div class="div-center">
+						<h2 style="text-align:center;">Canoe Competition</h2>
+					</div>
+				</div>
+				<ul class="menu col-xs-12 col-sm-9 col-lg-10 row">
+					<li class="item col-xs-6 col-sm-5 col-lg-3">
+						<div class="item-img container" class="col-xs-12">
+							<img src="/images/canoe1.jpg" width="100%" height="100%"></img>
+								<div class="s-overlay">
+						    		<div class="text"><p>Date: 17/03/2018<br>
+Venue: Krishnapatnam Port<br>
+Registration Fees: Rs.2000<br></p></div>
+						  		</div>
+						</div>
+						<h5 class="col-xs-12">Canoe Competition</h5>
+						<div class="col-xs-12"><button id="canoeCompetition" type="button">Add To Cart</button></div>
+					</li>  
+				</ul>
+<!--         <div class="paddles">
+					<button class="left-paddle-accomod paddle hidden">
+						<
+					</button>
+					<button class="right-paddle-accomod paddle">
+						>
+					</button>
+				</div> -->
+
+			</div>
+		</div>
+<!-- Footer -->
+
+	<footer class="row">
+		<div class="col-xs-12">
+			<a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+			<br>
+		</div>
+		<div  class="col-xs-12" style="bottom:20px;position:absolute;">
+			<p id="legal">All rights reserved &copy; 2018</p>
+		</div>
+	</footer>
+	</body>
+	<script>
+// function myCart()
+// {
+// 	if($(window).width()>991)
+// 	{
+// 		closeNav();
+// 	}
+// 	$.ajax({
+// 		url:"/myCart",
+// 		type:"GET",
+// 		success:function(json)
+// 		{
+// 			// $(".content").hide();
+// 		}
+// 	})
+// }
+
+$("#canoeCompetition").click(function(e) {
+
+	$.ajax({
+		type:"POST",
+		url:"/addToCart",
+		data: {
+			"itemID":"asce_e13",
+			"itemType":"events"
+		},
+
+		success:function (response) {
+			alert(response["message"]);
+		}
+	
+	
+	});
+
+});
+
+$("#freshMoreChallenge").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e6",
+			"itemType":"events"
+		},
+		success: function (response) {
+			alert(response["message"]);
+			// if(response["success"] == true) 
+			// 	alert(response["message"]);
+			// }
+		}
+	});
+})
+$("#envocist").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e8",
+			"itemType":"events"
+		},
+		success: function (response) {
+			alert(response["message"]);
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+
+		}
+	});
+})
+$("#meadPaper").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e4",
+			"itemType":"events"
+		},
+		success:function(response)
+		{
+			alert(response["message"]);
+		}
+	});
+})
+$("#jenga").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e9",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+
+
+		}
+	});
+})
+$("#quizBowl").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e1",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#surveyor").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e5",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#constrologer").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e11",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#traffineer").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e7",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+
+		}
+	});
+})
+$("#concreteBaseballBat").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e10",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+
+		}
+	});
+})
+$("#archBridge").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e3",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#cadatahon").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_e12",
+			"itemType":"events"
+		},
+		
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+
+	function logOut(){
+	closeNav();
+	$.ajax({
+		url:"/logout",
+		type:"GET",
+		success:function(json)
+		{
+			if(json.success==true)
+			{
+				window.location.href="/login"        
+			}
+		}
+	});
+}
+
+$("#act").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w3",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#ba").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w10",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#floatingConcrete").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w5",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#afa").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w9",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+/*			console.log(response);
+			if(response["success"] == true) {
+				console.log(response["message"]);
+			}*/
+			alert(response["message"]);
+		}
+	});
+})
+$("#staadPro").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w7",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#transportEngineering").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w1",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#seismicDesign").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w4",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#tallBuilding").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w6",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+})
+$("#revit").click(function(e) {
+	$.ajax({
+		type: "POST",
+		url: "/addToCart",
+		data: {
+			"itemID":"asce_w8",
+			"itemType":"workshops"
+		},
+		success: function (response) {
+			// console.log(response);
+			// if(response["success"] == true) {
+			// 	console.log(response["message"]);
+			// }
+			alert(response["message"]);
+		}
+	});
+});
+$(window).load(function(){
+  $(".preloader").fadeOut(500);
+});
+	$(document).ready(function(){
+		if($(window).width()>991)
+			 { 
+			 	$(".item-type").css("height",$(".menu-wrapper").height()+'px');
+			 	$(".altr").css("height",$(".pc-header").height()+'px');
+				$(".left-paddle-event,.left-paddle-workshop,.left-paddle-accomod").css("left",$(".item-type").width()+'px');}
+		else
+				$(".altr").css("height",$(".mobile-header").height()+'px');
+var scrollDuration = 400;
+var leftPaddleEvent = document.getElementsByClassName('left-paddle-event');
+var rightPaddleEvent = document.getElementsByClassName('right-paddle-event');
+var leftPaddleWorkshop = document.getElementsByClassName('left-paddle-workshop');
+var rightPaddleWorkshop = document.getElementsByClassName('right-paddle-workshop');
+var leftPaddleAccomod = document.getElementsByClassName('left-paddle-accomod');
+var rightPaddleAccomod = document.getElementsByClassName('right-paddle-accomod');
+var itemsLength = $('.item').length;
+var itemSize = $('.item').outerWidth(true);
+var paddleMargin = 20;
+var getMenuWrapperSize = function() {
+	return $('.menu-wrapper').outerWidth();
+}
+var eventPos=0;
+workshopPos=0;
+accomodPos=0;
+var menuWrapperSize = getMenuWrapperSize();
+$(window).on('resize', function() {
+	menuWrapperSize = getMenuWrapperSize();
+});
+var menuVisibleSize = menuWrapperSize;
+var getMenuSize = function() {
+	return itemsLength * itemSize;
+};
+menuSize = getMenuSize();
+var menuInvisibleSize = menuSize - menuWrapperSize;
+
+var getMenuPositionEvent = function() {
+	return $('.menu-event').scrollLeft();
+};
+var getMenuPositionWorkshop = function() {
+	return $('.menu-workshop').scrollLeft();
+};
+var getMenuPositionAccomod = function() {
+	return $('.menu-accomod').scrollLeft();
+};
+$('.menu-event').on('scroll', function() {
+
+	menuInvisibleSize = menuSize - menuWrapperSize;
+	menuPositionEvent = getMenuPositionEvent();
+	var menuEndOffset = menuInvisibleSize;
+	if (menuPositionEvent <= paddleMargin) {
+		$(leftPaddleEvent).addClass('hidden');
+		$(rightPaddleEvent).removeClass('hidden');
+	} else if (menuPositionEvent < menuEndOffset) {
+		// show both paddles in the middle
+		$(leftPaddleEvent).removeClass('hidden');
+		$(rightPaddleEvent).removeClass('hidden');
+	} else if (menuPositionEvent >= menuEndOffset) {
+		$(leftPaddleEvent).removeClass('hidden');
+		$(rightPaddleEvent).addClass('hidden');
+}
+});
+$('.menu-workshop').on('scroll', function() {
+
+	menuInvisibleSize = menuSize - menuWrapperSize;
+	menuPositionWorkshop = getMenuPositionWorkshop();
+	var menuEndOffset = menuInvisibleSize;
+	if (getMenuPositionWorkshop <= paddleMargin) {
+		$(leftPaddleWorkshop).addClass('hidden');
+		$(rightPaddleWorkshop).removeClass('hidden');
+	} else if (menuPositionWorkshop < menuEndOffset) {
+		// show both paddles in the middle
+		$(leftPaddleWorkshop).removeClass('hidden');
+		$(rightPaddleWorkshop).removeClass('hidden');
+	} else if (menuPositionEvent >= menuEndOffset) {
+		$(leftPaddleWorkshop).removeClass('hidden');
+		$(rightPaddleWorkshop).addClass('hidden');
+}
+});
+$('.menu-accomod').on('scroll', function() {
+
+	menuInvisibleSize = menuSize - menuWrapperSize;
+	menuPositionAccomod = getMenuPositionAccomod();
+	var menuEndOffset = menuInvisibleSize;
+	if (menuPositionAccomod <= paddleMargin) {
+		$(leftPaddleAccomod).addClass('hidden');
+		$(rightPaddleAccomod).removeClass('hidden');
+	} else if (menuPositionAccomod < menuEndOffset) {
+		// show both paddles in the middle
+		$(leftPaddleAccomod).removeClass('hidden');
+		$(rightPaddleAccomod).removeClass('hidden');
+	} else if (menuPositionAccomod >= menuEndOffset) {
+		$(leftPaddleAccomod).removeClass('hidden');
+		$(rightPaddleAccomod).addClass('hidden');
+}
+});
+$(rightPaddleEvent).on('click', function() {
+	if($(".menu-event").scrollLeft()+$(".menu-event").outerWidth()<menuSize)
+	{
+	$('.menu-event').animate( { scrollLeft:$(".menu-event").scrollLeft()+2*$(".item").outerWidth()}, scrollDuration);
+}
+});
+$(leftPaddleEvent).on('click', function() {
+	if($(".menu-event").scrollLeft()!==0)
+	{
+		$('.menu-event').animate( { scrollLeft: $(".menu-event").scrollLeft()-2*$(".item").outerWidth() }, scrollDuration);
+	}
+});
+$(rightPaddleWorkshop).on('click', function() {
+	if($(".menu-workshop").scrollLeft()+$(".menu-workshop").outerWidth()<menuSize)
+	{
+	$('.menu-workshop').animate( { scrollLeft:$(".menu-workshop").scrollLeft()+$(".menu-workshop").outerWidth()}, scrollDuration);
+	workshoppos=workshopPos+$(".menu-workshop").outerWidth();
+}
+});
+$(leftPaddleWorkshop).on('click', function() {
+	if($(".menu-workshop").scrollLeft()!==0)
+	{
+		$('.menu-workshop').animate( { scrollLeft:$(".menu-workshop").scrollLeft() -$(".menu-workshop").outerWidth() }, scrollDuration);
+		workshopPos=workshopPos-$(".menu-workshop").outerWidth();
+	}
+});
+$(rightPaddleAccomod).on('click', function() {
+	if($(".menu-accomod").scrollLeft()+$(".menu-accomod").outerWidth()<menuSize)
+	{
+	$('.menu-accomod').animate( { scrollLeft:$(".menu-accomod").scrollLeft()+$(".menu-accomod").outerWidth()}, scrollDuration);
+	workshoppos=workshopPos+$(".menu-workshop").outerWidth();
+}
+});
+$(leftPaddleAccomod).on('click', function() {
+	if($(".menu-accomod").scrollLeft()!==0)
+	{
+		$('.menu-accomod').animate( { scrollLeft:$(".menu-accomod").scrollLeft() -$(".menu-accomod").outerWidth() }, scrollDuration);
+		workshopPos=workshopPos-$(".menu-accomod").outerWidth();
+	}
+});
+	});
+	// };
+	</script>
+</html>

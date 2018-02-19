@@ -1,0 +1,201 @@
+{
+    "workshops":[
+        {
+            "name":"TRANSPORT ENGINEERING WORKSHOP",
+            "timings":"14.00-18.30",
+            "venue":"SMART CLASSROOM",
+            "day":1,
+            "productID":"asce_w1",
+            "price":600
+        },
+        {
+            "name":"ARCHITECTURAL DESIGN WORKSHOP",
+            "timings":"10.00-17.00",
+            "venue":"SMART CLASSROOM",
+            "day":2,
+            "productID":"asce_w2",
+            "price":600
+        },
+        {
+            "timings":"10.00-17.00",
+            "name":"ADVANCED CONCRETE TECHNOLOGY WORKSHOP",
+            "venue":"TT GALLERY",
+            "day":2,
+            "productID":"asce_w3",
+            "price":600
+        },
+        {
+            "name":"SEISMIC DESIGN",
+            "timings":"10.00-17.00",
+            "venue":"MB210",
+            "day":2,
+            "productID":"asce_w4",
+            "price":1200
+        },
+        {
+            "name":"FLOATING CONCRETE WORKSHOP",
+            "timings":"10.00-17.00",
+            "venue":"TT GALLERY",
+            "day":3,
+            "productID":"asce_w5",
+            "price":600
+        },
+        {
+            "name":"TALL BUILDING  WORKSHOP",
+            "timings":"10.00-17.00",
+            "venue":"SMART CLASSROOM",
+            "day":3,
+            "productID":"asce_w6",
+            "price":1200
+        },
+        {
+            "name":"STAAD PRO WORKSHOP",
+            "timings":"10.00-17.00",
+            "venue":"MB210",
+            "day":3,
+            "productID":"asce_w7",
+            "price":600
+        },
+        {
+            "name":"REVIT WORKSHOP",
+            "timings":"10.00-17.00",
+            "venue":"GDN153",
+            "day":4,
+            "productID":"asce_w8",
+            "price":600
+        },
+        {
+            "name":"ADVANCED FOUNDATION ANALYSIS",
+            "timings":"10.00-17.00",
+            "venue":"MB210",
+            "day":4,
+            "productID":"asce_w9",
+            "price":600
+        },
+        {
+            "name":"BENTLEY ARCHITECTURE",
+            "timings":"10.00-17.00",
+            "venue":"SJT SMART CLASSROOM",
+	    "price":600,
+            "day":2,
+            "productID":"asce_w10"
+        }
+        
+    ],
+
+    "events":[
+        {
+            "name":"QUIZ BOWL",
+            "timings":"15:30-17:30",
+            "venue":"CDMM203",
+            "day":1,
+            "productID":"asce_e1",
+            "price":50
+        },
+        {
+            "name":"CONSTROLOGER",
+            "timings":"17:00-17:45",
+            "venue":"RAJAJI/MB210",
+            "day":1,
+            "productID":"asce_e2",
+            "price":50
+        },
+        {
+            "name":"JENGA ",
+            "timings":"9:00-17:00",
+            "venue":"FOODIES",
+            "day":2,
+            "productID":"asce_e9",
+            "price":50
+        },
+	{
+            "name":"ARCH BRIDGE",
+            "timings":"10:00-17:00",
+            "venue":"FOODIES",
+            "day":2,
+            "productID":"asce_e3",
+            "price":50
+        },
+        {
+            "name":"MEAD PAPER",
+            "timings":"10:00-12:00",
+            "venue":"CDMM203",
+            "day":2,
+            "productID":"asce_e4",
+            "price":200
+        },
+        {
+            "name":"SURVEYOR",
+            "timings":"9:00-12:30",
+            "venue":"KALPANA CHAWLA GROUND",
+            "day":2,
+            "productID":"asce_e5",
+            "price":100
+        },
+        {
+            "name":"FRESHMORE CHALLENGE",
+            "timings":"9:00-12:00",
+            "venue":"INFRONT OF CONTROL ROOM ",
+            "day":2,
+            "productID":"asce_e6",
+            "price":50
+        },
+        {
+            "name":"TRAFFINEER",
+            "timings":"14:00-16:30",
+            "venue":"GDN153",
+            "day":2,
+            "productID":"asce_e7",
+            "price":50
+        },
+        {
+            "name":"ENVOCIST",
+            "timings":"14:00-18:00",
+            "venue":"GDN 142",
+            "day":2,
+            "productID":"asce_e8",
+            "price":100
+        },
+        {
+            "name":"ARCH BRIDGE & JENGA",
+            "timings":"10:00-17:00",
+            "venue":"FOODIES",
+            "day":3,
+            "productID":"asce_e9",
+            "price":50
+        },
+        {
+            "name":"CONCRETE BASEBALL BAT COMPETITION",
+            "timings":"10.00-12.00",
+            "venue":"KALPANA CHAWLA GROUND",
+            "day":4,
+            "productID":"asce_e10",
+            "price":100
+        },
+        {
+            "name":"CONSTROLOGER",
+            "timings":"14.00-16.00",
+            "venue":"CDMM201",
+            "day":4,
+            "productID":"asce_e11",
+            "price":50
+        },
+        {
+            "name":"CADATAHON",
+            "timings":"",
+            "venue":"",
+            "day":"",
+            "productID":"asce_e12",
+            "price":100
+        },
+	{
+		"name":"Concrete Canoe Competition",
+		"timings":"",
+		"venue":"",
+		"day":3,
+		"productID":"asce_e13",
+		"price":2000	
+	}
+
+    ]
+}

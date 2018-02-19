@@ -1,0 +1,35 @@
+.content
+{
+	color:white;
+}
+.content p:nth-child(2)
+{
+	font-family: 'Montserrat', sans-serif;
+	opacity:1;
+	font-size:55px;
+	margin-top:5%;
+	font-weight: bolder;
+	letter-spacing: 3.5px;
+}
+.content p:nth-child(3)
+{
+	letter-spacing: 1px;
+	margin-top:3.2%;
+	font-size:18px;
+}
+@media only screen and (max-width:991px)
+{
+	.content
+	{
+		padding-top:10px;
+		height:45vh;
+	}
+	.content p:nth-child(2)
+	{
+	font-size:40px;
+	}
+	.content p:nth-child(3)
+	{
+	font-size:15px;
+	}
+}

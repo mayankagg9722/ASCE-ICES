@@ -1,0 +1,390 @@
+body
+{
+  margin:0px;
+  padding:0px;
+  overflow-x:hidden;
+  position:relative;
+  -ms-overflow-style:none;
+}
+a
+{
+  text-decoration:none;
+}
+a:hover
+{
+  text-decoration:none;
+}
+.underline
+{
+  text-decoration: underline;
+}
+.row
+{
+  margin:0px;
+  padding:0px;
+}
+[class*="col-"]
+{
+  padding:0px;
+}
+::-webkit-scrollbar
+{
+  display: none;
+}
+#overlay
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:11;
+  display:none;
+  transition:all 0.5s;
+}
+.sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    text-align:center;
+    display:block;
+    background-color: #e7e7e7; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition:all 0.5s; 
+}
+.sidenav .closebtn,.sidenav .close:hover
+{
+  cursor:pointer;
+  color:black;
+  background-color:transparent !important;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color:#efefef;
+    background-color:#111;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*Navbar*/
+
+.nav-style
+{
+  display:flex;
+  justify-content: space-between;
+  padding-right:50px;
+}
+.altr
+{
+  margin-top:20px;
+  margin-bottom: 1.5%;
+}
+.ham
+{
+  text-align: center;
+}
+.ham i
+{
+  font-size: 30px;
+  color:#222;
+  padding-bottom: 4px;
+}
+.ham i:hover
+{
+  cursor:pointer;
+}
+/*.header
+{
+  padding-top:1%;
+  margin-bottom:1.5%;
+  position:fixed;
+  z-index:10;
+  background-color: transparent;
+}*/
+.asce-logo
+{
+  text-align:center;
+  float:right;
+  padding-bottom: 10px;
+}
+.pc-asce-logo
+{
+  margin:5px 0px;
+  text-align:center;
+}
+.pc-header a
+{
+  text-decoration: none;
+  color:white;
+  font-size:15px;
+}
+.pc-header a:hover
+{
+  text-decoration: none;
+  color:cyan;
+}
+.pc-header
+{
+  position: fixed;
+  z-index:10;
+  margin-top:25px;
+  text-align: center;
+  color:white;
+  background-color:transparent;
+  display:block;
+}
+.asce-logo img,.pc-asce-logo img
+{
+  height:30%;
+  width:50%;
+}
+.nav-style p
+{
+  margin:5px 0px;
+}
+
+.mobile-header
+{
+  padding-top:20px;
+  display:none;
+  position:fixed;
+  z-index:10;
+}
+#color
+{
+  color:#1C768A;
+}
+
+/*LandingPage*/
+
+.home-heading
+{
+  position: absolute;
+  top:55%;
+  transform:translateY(-50%);
+  text-align:center;
+  width:100%;
+  color:#e7e7e7;
+}
+.ultra-large
+{
+  font-size:100px;
+  font-weight:700;
+  color:#e7e7e7;
+  letter-spacing: 30px;
+  line-height:0.5;
+  width:100%;
+
+}
+#subtitle
+{
+  font-size:30px;
+  font-weight: 300;
+  line-height:1;
+  letter-spacing:3px !important;
+}
+.full-form
+{
+  display:none;
+  font-size:30px;
+  font-weight:200;
+  letter-spacing:5px !important;
+}
+.home-heading p
+{
+  font-size:18px;
+}
+.home-heading button
+{
+  background-color: transparent;
+  border:2px solid #e7e7e7;
+  padding:5px 10px;
+  font-size:15px;
+  transition:all 0.1s linear;
+}
+.home-heading button:hover,#contactPage button:hover
+{
+  transform:scale(1.05);
+}
+.home-heading button:active,#contactPage button:active
+{
+  transform:scale(1);
+}
+.home-heading i
+{
+  font-size:25px;
+  margin:5px;
+}
+
+
+/*About-page*/
+
+.about-image
+{
+  background:url("../images/about.jpg");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.about-back
+{
+  background-color: #222;
+}
+.about
+{
+  padding-left:20px;
+  background-color:#efefef;
+  padding-bottom:20px;
+}
+.about-content
+{
+  font-size:20px;
+  padding-right:40px;
+  text-align:justify;
+}
+
+
+/*Contact-page*/
+
+#contactPage
+{
+  text-align: center;
+}
+#contactPage form
+{
+  margin-bottom:40px;
+}
+#contactPage input,textarea
+{
+  border:1px solid #999;
+  border-radius:5px;
+  width:100%;
+  padding:10px 20px;
+}
+textarea
+{
+  height:100px;
+}
+#contactPage button
+{
+  background-color:#1C768A;
+  color:#e7e7e7;
+  padding:10px 20px;
+  border-radius:5px;
+  border:2px solid transparent;
+  transition:all 0.1s linear;
+}
+
+/*Footer*/
+
+footer
+{
+  background-color:#e7e7e7;
+  text-align:center;
+  height:20vh;
+  position:relative;
+  padding-top:30px !important;
+}
+footer i
+{
+  color:black;
+  margin:10px;
+  font-size:30px !important;
+}
+
+/*Mobile-View*/
+
+@media only screen and (max-width:991px)
+{
+/*  #pc
+  {
+    display: none;
+  }*/
+  .home-heading
+  {
+    top:52%;
+  }
+  .pc-header
+  {
+    display:none;
+  }
+  .mobile-header
+  {
+    background-color:#ffffff;
+    border-bottom:1px solid #e7e7e7;
+    /*display:block;*/
+  }
+  .ultra-large
+  {
+  font-size:60px;  
+  line-height:0.6;  
+  }
+  #subtitle
+  {
+    font-size:25px;
+    margin-left:-30px;
+  }
+  .home-heading p
+  {
+    font-size:15px;
+  }
+  .home-heading i
+  {
+    font-size:20px;
+  }
+    .header
+  {
+    padding:3%;
+  }
+  .ham i
+  {
+    font-size:20px;
+  }
+  .asce-logo img
+  {
+    height:30%;
+    width:60%;
+  }
+  .about-image
+  {
+    display:none;
+  }
+  .about
+  {
+    text-align:center;
+    padding:20px;
+  }
+  .about-content
+  {
+    height:70vh;
+    padding:0px 0px 20px 0px;
+    overflow-y: scroll
+  }
+  #contactPage p
+  {
+    letter-spacing:0.8px;
+    font-size:11px;
+  }
+}

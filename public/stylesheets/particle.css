@@ -1,0 +1,72 @@
+.particle-network-animation {
+  overflow-y:hidden;
+  position:absolute;
+  width:100vw;
+  background:url("../images/f1(1).jpg");
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+  z-index:-2;
+/*  &::before {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:black;
+  }*/
+}
+.glow {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+$duration: 25s;
+.glow-1 {
+  width: 150vw;
+  height: 150vh;
+  margin-top: -75vh;
+  margin-left: -75vw;
+  animation: glow-1-move $duration linear infinite both;
+}
+@keyframes glow-1-move {
+  from {
+    transform: translate(-100%, 100%);
+  }
+  to {
+    transform: translate(100%, -100%);
+  }
+}
+.glow-2 {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -50vh;
+  margin-left: -50vw;
+  animation: glow-2-move $duration linear $duration / 3 infinite both;
+}
+@keyframes glow-2-move {
+  from {
+    transform: translate(-100%, 0%);
+  }
+  to {
+    transform: translate(100%, 100%);
+  }
+}
+.glow-3 {
+  width: 120vw;
+  height: 120vh;
+  margin-top: -60vh;
+  margin-left: -60vw;
+  animation: glow-3-move $duration linear $duration / 3 * 2 infinite both;
+}
+@keyframes glow-3-move {
+  from {
+    transform: translate(100%, 100%);
+  }
+  to {
+    transform: translate(0%, -100%);
+  }
+}

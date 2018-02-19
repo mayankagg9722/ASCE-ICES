@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cart</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="about ASCE 2018">
+    <meta name="author" content="ASCE">
+
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="../stylesheets/particle.css"/> -->
+    <link rel="stylesheet" href="/stylesheets/mycart-style.css"/>
+
+    <script src="/javascripts/jQuery.js"></script>
+    <script src="/javascripts/side-nav.js" defer></script>
+  <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+ -->  
+ <style>
+ a
+ {
+ 	text-decoration: none;
+ 	color:white;
+ }
+ .preloader
+{
+  top:0;
+  height:100vh;
+  width:100vw;
+  background-color: black;
+  position:fixed;
+  z-index:99999;
+}
+.preloader div
+{
+  text-align:center;
+  z-index:100000;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+ </style>
+ </head>
+  <body  class="row">
+  <div class="preloader">
+    <div class="col-xs-3 col-sm-1"><img src="/images/loader.gif" width="100%" height="100%"></img></div>
+  </div>
+  <div id="overlay" onclick="closeNav()"></div>
+  <div id="mySidenav" class="sidenav">
+    <i class="closebtn" onclick="closeNav()">&times;</i>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/canoe" id="#hel" onclick="closeNav()">Canoe Competition</a>
+    <a href="/conference"  onclick="closeNav()">Conference</a>
+    <a href="/workshop" onclick="closeNav()">Workshop</a>
+    <a href="/events" onclick="closeNav()">Events</a>
+    <a href="/logout" onclick="closeNav()">Signout</a>
+    <a href="/mycart" onclick="closeNav()"><i class="fa fa-shopping-cart"></i></a>
+  </div>
+  <div class="mobile-header col-xs-12 row">
+    <div class="ham col-sm-2 col-md-2 col-lg-1 col-xs-2" onclick="openNav()"><i class="fa fa-reorder"></i></div>
+    <div class="asce-logo col-xs-3"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+  </div>
+  <div class="pc-header col-sm-12 row">
+    <div class="pc-asce-logo col-sm-2"><a href="/"><img src="/images/top-logo.png"></img></a></div>
+    <div class="nav-style col-sm-10 col-lg-offset-3 col-lg-7" style="margin-top:20px;margin-bottom:20px;">
+      <p><a href="/">Home</a></p>
+      <p><a href="/conference">Conference</a></p>
+      <p><a href="/canoe">Canoe Competition</a></p>
+      <p><a href="/events">Events</a></p>
+      <p><a href="/workshop">Workshop</a></p>
+      <p><a href="/login">Signout</a></p>
+      <p><a href="/mycart"><i class="fa fa-shopping-cart"></i></a></p>
+    </div>
+  </div>
+    <div class="altr row"></div>
+    <div class="row content col-xs-12">
+    <div class="row" style="padding:20px 30px;">
+        <div class="mycart row col-xs-12 col-sm-8">
+            <div class="cart-option col-xs-12">
+                <p class="left col-xs-12 col-sm-2"><b>My Purchased</b></p>
+                <p id="pc" class="right col-xs-2">Price</p>
+            </div>
+            <% cart[0].purchased.workshops.forEach(function(data,index){%>
+            <div class="cart-item col-xs-12">
+                <div class="item-details col-xs-12 col-sm-10  mobile-center">                  
+                    <div class="item-name">
+                        <h3><%=data.name%></h3>
+                    </div>
+                    <div class="item-date">
+                        <p>Date:<%=14+data.day%>/03/2018</p>
+                    </div>
+                    <div class="item-venue">
+                        <p>Venue:<%=data.venue%></p>
+                    </div>
+                   <!-- <div class="item-contact">
+                        <p>contact:9876543210(Name)</p>
+                    </div>-->
+                    <div class="price" id="mobile">
+                        <p>Price:Rs.<%=data.price %></p>
+                    </div>
+    
+                </div>
+                <div class="item-price col-sm-2" id="pc">
+                    <p>Rs.<%=data.price %></p>
+                </div>
+            </div>
+            <%})%>
+            <% cart[0].purchased.events.forEach(function(data,index){%>
+            <div class="cart-item col-xs-12">
+                <div class="item-details col-xs-12 col-sm-10 mobile-center">                  
+                    <div class="item-name">
+                        <h3><%=data.name%></h3>
+                    </div>
+                    <div class="item-date">
+                        <p>Date:<%=14+data.day %>/03/2018</p>
+                    </div>
+                    <div class="item-venue">
+                        <p>Venue:<%=data.venue %></p>
+                    </div>
+                    <!--div class="item-contact">
+                        <p>contact:9876543210(Name)</p>
+                    </div-->
+                    <div class="price" id="mobile">
+                        <p>Price:Rs.<%=data.price %></p>
+                    </div>
+                </div>
+                <div class="item-price col-sm-2" id="pc">
+                    <p>Rs.<%=data.price%></p>
+                </div>
+            </div>
+            <%})%>
+        </div>
+
+
+
+        <div class="mycart row col-xs-12 col-sm-8">
+            <div class="cart-option col-xs-12">
+                <p class="left col-xs-12 col-sm-2"><b>My Cart</b></p>
+                <p id="pc" class="right col-xs-2">Price</p>
+            </div>
+            <% cart[0].cart.workshops.forEach(function(data,index){%>
+            <div class="cart-item col-xs-12">
+                <div class="item-details col-xs-12 col-sm-10  mobile-center">                  
+                    <div class="item-name">
+                        <h3><%=data.name%></h3>
+                    </div>
+                    <div class="item-date">
+                        <p>Date:<%=14+data.day%>/03/2018</p>
+                    </div>
+                    <div class="item-venue">
+                        <p>Venue:<%=data.venue%></p>
+                    </div>
+                   <!-- <div class="item-contact">
+                        <p>contact:9876543210(Name)</p>
+                    </div>-->
+                    <div class="price" id="mobile">
+                        <p>Price:Rs.<%=data.price %></p>
+                    </div>
+                    <div class="item-buttons">
+                        <button type="button" class="workshopRemove" value=<%= data.productID%>>Remove</button>
+                    </div>
+                </div>
+                <div class="item-price col-sm-2" id="pc">
+                    <p>Rs.<%=data.price %></p>
+                </div>
+            </div>
+            <%})%>
+            <% cart[0].cart.events.forEach(function(data,index){%>
+            <div class="cart-item col-xs-12">
+                <div class="item-details col-xs-12 col-sm-10 mobile-center">                  
+                    <div class="item-name">
+                        <h3><%=data.name%></h3>
+                    </div>
+                    <div class="item-date">
+                        <p>Date:<%=14+data.day %>/03/2018</p>
+                    </div>
+                    <div class="item-venue">
+                        <p>Venue:<%=data.venue %></p>
+                    </div>
+                    <!--div class="item-contact">
+                        <p>contact:9876543210(Name)</p>
+                    </div-->
+                    <div class="price" id="mobile">
+                        <p>Price:Rs.<%=data.price %></p>
+                    </div>
+                    <div class="item-buttons">
+                        <button type="button" class="eventRemove" value=<%= data.productID%>>Remove</button>
+                    </div>
+                </div>
+                <div class="item-price col-sm-2" id="pc">
+                    <p>Rs.<%=data.price%></p>
+                </div>
+            </div>
+            <%})%>
+            <div class="for-all for-all-mobile col-xs-12">
+                <a href="/profile"><button type="button">Add More</button></a>
+                <a href="/payment"><button type="button" id="all-items">Make Payment</button></a>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="price-details col-sm-offset-1 col-sm-3" style="position:fixed;z-index:100;right:40px;" id="pc">
+            <div class="heading">   
+                <h3>Price Details</h3>
+            </div>
+            <!--<div class="item-wise-price">
+                <p>Events(x items)<span class="right">Rs.XXX</span></p>
+                <p>Workshops(x items)<span class="right">Rs.XXX</span></p>
+                <p>Accomodation(x items)<span class="right">Rs.XXX</span></p>
+                <p>T-shirts(x items)<span class="right">Rs.XXX</span></p>
+            </div>-->
+            <div class="total">
+                <h4>Total Amount:<span class="right">Rs.<%=total%></span></h4>
+            </div>
+        </div>
+        <div class="price-details col-xs-12" style="margin-top:20px;" id="mobile">
+            <div class="heading">   
+                <h3>Price Details</h3>
+            </div>
+           <!-- <div class="item-wise-price">
+                <p>Events(x items)<span class="right">Rs.XXX</span></p>
+                <p>Workshops(x items)<span class="right">Rs.XXX</span></p>
+                <p>Accomodation(x items)<span class="right">Rs.XXX</span></p>
+                <p>T-shirts(x items)<span class="right">Rs.XXX</span></p>
+            </div>-->
+            <div class="total">
+                <h4>Total Amount:<span class="right">Rs.<%=total%></span></h4>
+            </div>
+        </div>
+    </div>
+</div>
+  <footer class="row col-xs-12">
+    <div class="col-xs-12">
+      <a href="https://www.facebook.com/asceindiastudentconference/" target="_blank"><i  class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.google.co.in/maps/place/Vellore+Institute+of+Technology/@12.9715835,79.1583751,17z/data=!4m8!1m2!2m1!1svit+vellore!3m4!1s0x3bad479f0ccbe067:0xfef222e5f36ecdeb!8m2!3d12.9717796!4d79.1589042" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <br>
+    </div>
+    <div  class="col-xs-12" style="bottom:20px;position:absolute;">
+      <p id="legal">All rights reserved &copy; 2018</p>
+    </div>
+  </footer>
+  </body>
+  <script>
+$(window).load(function(){
+  $(".preloader").fadeOut(500);
+});
+    $(document).ready(function(){
+        // display();
+	
+$(".workshopRemove").on("click",function()
+        {
+            
+            var itemID = this.value;
+            var itemType = "workshops"
+        	$.ajax({
+        		url:'/removeFromCart',
+        		type:"POST",
+                data:{
+                    'itemID':itemID,
+                    'itemType':itemType
+                },
+        		success:function(json){
+        			if(json["success"] == true){
+                        window.location.href = "http://asceis-ices.com/mycart"
+                    }
+        		}
+        	})
+        });
+
+        $(".eventRemove").on("click",function()
+        {
+            
+            var itemID = this.value;
+            var itemType = "events"
+        	$.ajax({
+        		url:'/removeFromCart',
+        		type:"POST",
+                data:{
+                    'itemID':itemID,
+                    'itemType':itemType
+                },
+        		success:function(json){
+        			if(json["success"] == true){
+                       	window.location.href = "http://asceis-ices.com/mycart"
+                    }
+        		}
+        	})
+        });
+       /* $(".workshopRemove").on("click",function()
+        {
+            
+            var itemID = this.value;
+            var itemType = "workshops"
+            console.log(itemID);
+        	$.ajax({
+        		url:'/removeFromCart',
+        		type:"POST",
+                data:{
+                    'itemID':itemID,
+                    'itemType':itemType
+                }});
+        )};
+
+        $(".eventRemove").on("click",function()
+        {
+            
+            var itemID = this.value;
+            var itemType = "events"
+            console.log(itemID);
+        	$.ajax({
+        		url:'/removeFromCart',
+        		type:"POST",
+                data:{
+                    'itemID':itemID,
+                    'itemType':itemType
+                }});
+        });*/
+       // if($(".cart-item").length<3)
+       // {
+         //   $("footer").css({position:"absolute",bottom:"0px"});
+       // }
+        x=$(".content").height();
+        $(".content").css("height",x+$("footer").height()+'px');
+        if($(window).width()>=992)
+        {
+            $(".item-price,.item-img").css("height",$(".cart-item").height()+'px');
+            if($(window).width()>991)
+            $(".altr").css("height",$(".pc-header").height()+'px');
+            else
+            $(".altr").css("height",$(".mobile-header".height()+'px'));
+
+        }
+        else
+        {
+            $(".altr").css("height",$(".mobile-header").height()+'px');
+        }
+    });
+  </script>
+</html>

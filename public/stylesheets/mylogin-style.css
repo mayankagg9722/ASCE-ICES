@@ -1,0 +1,311 @@
+body
+{
+	margin:0px;
+	padding:0px;
+	/*background-color:#e7e7e7;*/
+}
+.row
+{
+	margin:0px;
+	padding:0px;
+}
+[class*="col-"]
+{
+	padding:0px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+#overlay
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:11;
+  display:none;
+  transition:all 0.5s;
+}
+.sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    text-align:center;
+    display:block;
+    background-color: #e7e7e7; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition:all 0.5s; 
+}
+.sidenav .closebtn,.sidenav .close:hover
+{
+  cursor:pointer;
+  color:black;
+  background-color:transparent !important;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color:#efefef;
+    background-color:#111;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav i
+{
+	font-size: 30px;
+}
+/*Navbar*/
+
+.nav-style
+{
+  display:flex;
+  justify-content: space-between;
+  padding-right:50px;
+}
+.altr
+{
+  margin-top:20px;
+  margin-bottom: 1.5%;
+}
+.ham
+{
+  text-align: center;
+}
+.ham i
+{
+  font-size: 30px;
+  color:white;
+  padding-bottom: 4px;
+}
+.ham i:hover
+{
+  cursor:pointer;
+}
+.asce-logo
+{
+  text-align:center;
+  float:right;
+  padding-bottom: 10px;
+}
+.pc-asce-logo
+{
+  margin:10px 0px;
+  text-align:center;
+}
+.pc-header a
+{
+  text-decoration: none;
+  color:white;
+  font-size:15px;
+}
+.pc-header a:hover
+{
+  text-decoration: none;
+  color:cyan;
+}
+.pc-header
+{
+  position: fixed;
+  z-index:10;
+  top:0px;
+  text-align: center;
+  color:white;
+  background-color:black;
+  display:block;
+}
+.pc-header i
+{
+	font-size:25px;
+}
+.asce-logo img,.pc-asce-logo img
+{
+  height:30%;
+  width:50%;
+}
+
+.mobile-header
+{
+  padding:10px;
+  display:none;
+  position:fixed;
+  z-index:10;
+  background-color:black;
+  top:0px;
+}
+
+
+/*Page Content*/
+
+
+ul
+{
+	list-style-type: none;
+}
+.item
+{
+	display: inline-block;
+	padding:0px 5px;
+	text-align:center;
+}
+.div-center
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.menu-wrapper {
+	background-color: white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-shadow: 1px 1px 1px 1px grey;
+  position:relative;
+  margin-bottom: 20px;
+}
+.content
+{
+	padding:20px;
+}
+.menu-wrapper::-webkit-scrollbar,.menu::-webkit-scrollbar
+{
+	display:none;
+}
+/*.item-img img
+{
+	height:40vh;
+}*/
+.menu-wrapper>.row
+{
+	overflow-x:scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+.menu-wrapper>.row>[class*="col-"]
+{
+	display: inline-block;
+	float:none;
+}
+.menu
+{
+	padding:10px;
+	overflow-x:scroll;
+}
+.paddle {
+  position: absolute;
+  top: 50%;
+  height:15vh;
+  transform:translateY(-50%);
+  width: 3em;
+  background-color:white;
+  border:1px solid #e7e7e7;
+  font-size:20px;
+  transition: all 0.3s linear;
+}
+.paddle:hover {
+	background-color: #333;
+	color:white;
+	border:1px solid #333;
+}
+
+.left-paddle-event,.left-paddle-workshop,.left-paddle-accomod{
+  left: 0;
+}
+
+.right-paddle-event,.right-paddle-workshop,.right-paddle-accomod{
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+.item-type
+{
+	border-right:1px solid #e7e7e7;
+}
+.menu button
+{
+	padding:5px;
+	border-radius: 5px;
+	border:0px;
+	color:white;
+	background-color: #A1DEA0;
+	font-family: 'Montserrat', sans-serif;
+}
+h5
+{
+	font-weight:bold;
+}
+
+/*Footer*/
+
+footer
+{
+  background-color:#e7e7e7;
+  text-align:center;
+  height:20vh;
+  position:relative;
+  padding-top:30px !important;
+}
+footer i
+{
+  color:black;
+  margin:10px;
+  font-size:30px !important;
+}
+@media only screen and (max-width:767px)
+{
+/*	.paddle
+	{
+		display:none;
+	}*/
+	.paddle
+	{
+		height:10vh;
+		width:3rem;
+	}
+	.item-type
+	{
+		height:11vh;
+	}
+/*	.item-img img
+	{
+		height:25vh;
+	}*/
+/*	.menu
+	{
+		height:30vh;
+	}*/
+	.pc-header
+  	{
+    display:none;
+  	}
+  	.mobile-header
+  	{
+    display:block;
+  	}
+}

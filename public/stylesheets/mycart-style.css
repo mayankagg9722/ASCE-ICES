@@ -1,0 +1,280 @@
+body
+{
+	margin:0px;
+	padding:0px;
+}
+.row
+{
+	margin:0px;
+	padding:0px;
+}
+[class*="col-"]
+{
+	padding:0px;
+}
+
+.div-center
+{
+  position:absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+#overlay
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:11;
+  display:none;
+  transition:all 0.5s;
+}
+.sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    text-align:center;
+    display:block;
+    background-color: #e7e7e7; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition:all 0.5s; 
+}
+.sidenav .closebtn,.sidenav .close:hover
+{
+  cursor:pointer;
+  color:black;
+  background-color:transparent !important;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color:#efefef;
+    background-color:#111;
+}
+.sidenav i
+{
+	font-size: 30px;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*Navbar*/
+
+.nav-style
+{
+  display:flex;
+  justify-content: space-between;
+  padding-right:50px;
+}
+.altr
+{
+  margin-top:20px;
+  margin-bottom: 1.5%;
+}
+.ham
+{
+  text-align: center;
+}
+.ham i
+{
+  font-size: 30px;
+  color:white;
+  padding-bottom: 4px;
+}
+.ham i:hover
+{
+  cursor:pointer;
+}
+.asce-logo
+{
+  text-align:center;
+  float:right;
+  padding-bottom: 10px;
+}
+.pc-asce-logo
+{
+  margin:10px 0px;
+  text-align:center;
+}
+.pc-header a
+{
+  text-decoration: none;
+  color:white;
+  font-size:15px;
+}
+.pc-header a:hover
+{
+  text-decoration: none;
+  color:cyan;
+}
+.pc-header
+{
+  position: fixed;
+  z-index:10;
+  top:0px;
+  text-align: center;
+  color:white;
+  background-color:black;
+  display:block;
+}
+.asce-logo img,.pc-asce-logo img
+{
+  height:auto;
+  width:65%;
+}
+
+.mobile-header
+{
+  padding:10px;
+  display:none;
+  position:fixed;
+  z-index:10;
+  background-color:black;
+  top:0px;
+}
+
+
+
+
+.mycart,.price-details
+{
+	box-shadow: 1px 1px 1px 1px #e7e7e7;
+  margin-bottom:20px;
+}
+.left
+{
+	float:left;
+	text-align:center;
+}
+.right
+{
+	float:right;
+	text-align:center;
+}
+#pc
+{
+	display:block;
+}
+#mobile
+{
+	display:none;
+}
+.cart-option,.heading,.item-wise-price,.total
+{
+	padding:10px 30px 10px 20px;
+	border-bottom:1px solid #e7e7e7;
+}
+.cart-option p
+{
+	font-size:20px;
+}
+.cart-item
+{
+	border-bottom:1px solid #e7e7e7 ;
+}
+.item-details
+{
+	padding:0px 10px 20px 10px;
+}
+.item-price
+{
+	position:relative;
+	text-align:right;
+}
+.item-price p
+{
+	position:absolute;
+	top:50%;
+	left:20%;
+	transform: translateY(-50%);
+}
+.item-buttons button
+{
+	border:0px;
+	border-radius:5px;
+	padding:5px;
+	color:white;
+	background-color:black;
+}
+.for-all
+{
+	padding:20px;
+	display:flex;
+	justify-content:flex-end;
+}
+.for-all button
+{
+	border:0px;
+	border-radius:5px;
+	color:white;
+	padding:10px;
+	margin:10px;
+	background-color:black;
+}
+
+/*Footer*/
+
+footer
+{
+  background-color:#e7e7e7;
+  text-align:center;
+  height:20vh;
+  position:relative;
+  padding-top:30px !important;
+}
+footer i
+{
+  color:black;
+  margin:10px;
+  font-size:30px !important;
+}
+
+@media only screen and (max-width:991px)
+{
+	#pc
+	{
+		display:none;
+	}
+	#mobile
+	{
+		display:block;
+	}
+	.mobile-center
+	{
+		text-align:center;
+	}
+	.for-all-mobile
+	{
+		justify-content:center !important;
+	}
+	.pc-header
+  	{
+    	display:none;
+  	}
+  	.mobile-header
+  	{
+    	display:block;
+  	}
+}

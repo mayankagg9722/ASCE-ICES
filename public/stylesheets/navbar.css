@@ -1,0 +1,78 @@
+.altr
+{
+  margin-top:20px;
+  margin-bottom: 1.5%;
+}
+.ham
+{
+  text-align: center;
+}
+.ham i
+{
+  font-size: 30px;
+  color:white;
+  padding-bottom: 4px;
+}
+.ham i:hover
+{
+  cursor:pointer;
+}
+.header
+{
+  padding-top:1%;
+  margin-bottom:1.5%;
+  position:fixed;
+  z-index:10;
+  background-color: transparent;
+}
+.asce-logo
+{
+  text-align:center;
+  float:right;
+  padding-bottom: 10px;
+}
+.pc-asce-logo
+{
+  margin:10px 0px;
+  text-align:center;
+}
+.pc-header a
+{
+  text-decoration: none;
+  color:white;
+}
+.pc-header a:hover
+{
+  text-decoration: none;
+  color:green;
+}
+.pc-header
+{
+  position: fixed;
+  z-index:10;
+  margin-top:25px;
+  text-align: center;
+  color:white;
+  background-color:transparent;
+}
+.asce-logo img,.pc-asce-logo img
+{
+  height:30%;
+  width:50%;
+}
+@media only screen and (max-width:1100px)
+{
+  .header
+  {
+    padding:3%;
+  }
+  .ham i
+  {
+    font-size:20px;
+  }
+.asce-logo img
+{
+  height:30%;
+  width:60%;
+}
+}
