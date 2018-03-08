@@ -3,6 +3,7 @@ var promise = require('promise');
 var router = express.Router();
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 var db = require('../con_db.js');
+var fs = require('fs');
 var request = require('request');
 
 router.get('/', function(req, res, next) {
@@ -299,6 +300,17 @@ router.post('/cart/getDetails', function (req, res, next) {
   console.log("################# PAYMENT #################")
   console.log(finalJson)
   console.log("################# PAYMENT #################")
+
+  fs.appendFile('../log.txt', '\n'+finalJson, function (err) {
+    if (err) {
+      console.log("Error in saving data to text file");
+    }
+
+    else {
+      console.log("saved");
+    }
+  });
+
   var contingentID=finalJson.Refno;
   if(finalJson.status=='0399'){
     res.json({
@@ -306,6 +318,7 @@ router.post('/cart/getDetails', function (req, res, next) {
       'status':'401',
       'success':false
     });
+
   }
   else if(finalJson.status=='0300'){
     getCart(contingentID, function(total,data) {
@@ -320,6 +333,7 @@ router.post('/cart/getDetails', function (req, res, next) {
               });
             }
             else{
+
               res.json({
                 'message':'cart successfully updated',
                 'status':'200',
