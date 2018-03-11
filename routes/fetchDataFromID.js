@@ -1,8 +1,6 @@
 var express = require('express');
 var promise = require('promise');
 var db = require('../con_db.js');
-
-
 var router = express.Router();
 
 router.post('/', function (req, res, next) {
@@ -35,8 +33,40 @@ router.post('/', function (req, res, next) {
                 }
 
                 else {
-                    data["success"] = true;
-                    res.json(data);
+
+                    var events = data[0].purchased.events;
+                    var workshops = data[0].purchased.workshops;
+                    var eventsString = "";
+                    var workshopsString = "";
+                    var eventsArray = [];
+                    var workshopsArray = [];
+
+                    events.forEach(element => {
+                        var tempString = "";
+                        var element = JSON.stringify(element);
+                        var trimmed = element.substring(1, element.length-1);
+                        eventsArray.push(trimmed);
+                    });
+
+
+
+                    workshops.forEach(element => {
+                        var tempString = "";
+                        var element = JSON.stringify(element);
+                        var trimmed = element.substring(1, element.length-1);
+                        workshopsArray.push(trimmed);
+                    });
+
+                    
+            
+                    res.render('userDetails', {
+                        "firstName":data[0].firstName,
+                        "lastName":data[0].lastName,
+                        "contingentID":data[0].contingentID,
+                        "email":data[0].email,
+                        "events":eventsArray,
+                        "workshops":workshopsArray,
+                    });
                 }
             }
         }); 
