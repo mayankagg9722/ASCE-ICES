@@ -2,7 +2,7 @@
     "workshops":[
         {
             "name":"TRANSPORT ENGINEERING WORKSHOP",
-            "timings":"14.00-18.30",
+            "timings":"14.00-18.00",
             "venue":"SMART CLASSROOM",
             "day":1,
             "productID":"asce_w1",
@@ -36,7 +36,7 @@
             "name":"FLOATING CONCRETE WORKSHOP",
             "timings":"10.00-17.00",
             "venue":"TT GALLERY",
-            "day":3,
+            "day":1,
             "productID":"asce_w5",
             "price":600
         },
@@ -76,7 +76,7 @@
             "name":"BENTLEY ARCHITECTURE",
             "timings":"10.00-17.00",
             "venue":"SJT SMART CLASSROOM",
-	    "price":600,
+	        "price":600,
             "day":2,
             "productID":"asce_w10"
         }
@@ -96,7 +96,7 @@
             "name":"CONSTROLOGER",
             "timings":"17:00-17:45",
             "venue":"RAJAJI/MB210",
-            "day":1,
+            "day":4,
             "productID":"asce_e2",
             "price":50
         },
@@ -108,7 +108,7 @@
             "productID":"asce_e9",
             "price":50
         },
-	{
+	   {
             "name":"ARCH BRIDGE",
             "timings":"10:00-17:00",
             "venue":"FOODIES",
@@ -152,7 +152,7 @@
             "name":"ENVOCIST",
             "timings":"14:00-18:00",
             "venue":"GDN 142",
-            "day":2,
+            "day":1,
             "productID":"asce_e8",
             "price":100
         },
@@ -168,34 +168,24 @@
             "name":"CONCRETE BASEBALL BAT COMPETITION",
             "timings":"10.00-12.00",
             "venue":"KALPANA CHAWLA GROUND",
-            "day":4,
+            "day":2,
             "productID":"asce_e10",
             "price":100
         },
         {
-            "name":"CONSTROLOGER",
-            "timings":"14.00-16.00",
-            "venue":"CDMM201",
-            "day":4,
-            "productID":"asce_e11",
-            "price":50
-        },
-        {
             "name":"CADATAHON",
-            "timings":"",
-            "venue":"",
-            "day":"",
+            "timings":"20:00-8:00",
+            "venue":"GDN153",
+            "day":"3",
             "productID":"asce_e12",
-            "price":100
+            "price":100 
         },
-	{
+	   {
 		"name":"Concrete Canoe Competition",
 		"timings":"",
 		"venue":"",
 		"day":3,
 		"productID":"asce_e13",
 		"price":2000	
-	}
-
-    ]
+	   }]
 }
