@@ -16,6 +16,7 @@ router.post('/', function (req, res, next) {
     else {
 
         var contingentID = req.body.contingentID;
+        contingentID = contingentID.trimLeft().trimRight();
         db.user.find({ contingentID: contingentID },{_id:0, password:0, __v:0}, function (err, data) {
 
             if (err) {
