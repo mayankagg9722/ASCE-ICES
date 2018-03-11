@@ -2,6 +2,7 @@ var express = require('express');
 var promise = require('promise');
 var router = express.Router();
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+var nodemailer = require('nodemailer');
 var db = require('../con_db.js');
 var fs = require('fs');
 var request = require('request');
@@ -295,6 +296,60 @@ router.get('/test', function (req, res, next) {
 });
 
 */
+
+function sendMail(email, option) {    
+      let transporter = nodemailer.createTransport({
+          service: 'Gmail',
+          auth: {
+              user: 'asce.conference18@gmail.com',
+              pass: 'gunhouse1969'
+          }
+      });
+
+      // setup email 
+      let mailOptionsSuccess = {
+          from: '"ASCE" <asce.conference18@gmail.com>',
+          to: email,
+          subject: 'Greetings from ASCE',
+          html: '<p>Your payment has been successfully processed. <br>Regards</p>'
+      };
+
+      let mailoptionsFailure = {
+        from: '"ASCE" <asce.conference18@gmail.com>',
+        to: email,
+        subject: 'Greetings from ASCE',
+        html: '<p>Your payment request has failed. Please try again later<br>Regards</p>'
+      }
+
+      if(option == 1) {
+        transporter.sendMail(mailOptionsSuccess, function (err, info) {
+
+          if (err) {
+              reject(err);
+          }
+
+          else {
+              resolve(info.messageId);
+          }
+
+        });
+      }
+
+      else if(option == 2) {
+        transporter.sendMail(mailOptionsFailure, function (err, info) {
+
+          if (err) {
+              reject(err);
+          }
+
+          else {
+              resolve(info.messageId);
+          }
+
+        });
+      } 
+}
+
 router.post('/cart/getDetails', function (req, res, next) {
   finalJson=req.body;
   console.log("################# PAYMENT #################")
@@ -334,7 +389,6 @@ router.post('/cart/getDetails', function (req, res, next) {
               });
             }
             else{
-
               res.json({
                 'message':'cart successfully updated',
                 'status':'200',
