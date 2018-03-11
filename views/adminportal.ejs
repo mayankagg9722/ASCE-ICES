@@ -40,12 +40,9 @@
 <body>
 
     <h1>Welcome Admin</h1>
-
-
     <h2>Search By contingentID</h2>
-    <form id="searchByContingentID">
-            
-        <label>contingentID: </label> <input type="text" placeholder="contingentID" id="contingentID">
+    <form id="searchByContingentID" action="/fetchDataFromID" method="POST">
+        <label>contingentID: </label> <input type="text" placeholder="contingentID" name="contingentID">
         <input type="submit" value="SUBMIT">
     </form>
     <br><br>
@@ -93,7 +90,6 @@
 
             <input type="submit" value="SUBMIT">
     </form>
-
 
     <table id="eventsRegisteredTable">
         <tr>
@@ -224,32 +220,21 @@
     <script type="text/javascript">
 
 
-        $("#searchByContingentID").submit(function(e) {
-            e.preventDefault();
-            var contingentID = $("#contingentID").val();
-            var userData = $('#userData');
-            var userDataP = $('#userData p');
-
-            userData.empty();
-            $.ajax({
-                type: "POST",
-                url: "/fetchDataFromID",
-                data: {
-                    contingentID:contingentID
-                },
-                success: function (response) {
-                    response = response[0];
-                    for(var key in response) {
-                        element = response[key];
-                        if(key == "cart" || key == "purchased") {
-                            
-                        }
-                        var userKey = $('<span><b>'+ key + '</b>-' + element + '</span><br><br>');
-                        userData.append(userKey);
-                    }
-                }
-            });
-        }); 
+        // $("#searchByContingentID").submit(function(e) {
+        //     console.log("Function called");
+        //     e.preventDefault();
+        //     var contingentID = $("#contingentID").val();
+        //     var userData = $('#userData');
+        //     var userDataP = $('#userData p');
+        //     userData.empty();
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "/fetchDataFromID",
+        //         data: {
+        //             contingentID:contingentID
+        //         }
+        //     });
+        // }); 
 
 
         var userDetailsTable = $('#userDetailsTable');

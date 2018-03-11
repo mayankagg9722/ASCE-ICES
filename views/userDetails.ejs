@@ -1,0 +1,43 @@
+<html>
+    <head><title>User Details</title></head>
+    <style>
+        body {
+            font-family: Helvetica;
+            margin: 20px 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+    <body>
+       <h1>PARTICIPANT DETAILS</h1>
+       <p><span><b>FIRST NAME:</b> </span><span> <%= firstName %> </span><br></p>
+       <p><span><b>LAST NAME:</b> </span><span> <%= lastName %> </span><br></p>
+       <p><span><b>CONTINGENT ID:</b></span><span> <%= contingentID %> </span><br></p>
+       <p><span><b>EMAIL ID:</b> </span><span> <%= email %> </span><br></p>
+       <p><span><b>EVENTS:</b></span><br><span>
+        <% var counter = 1 %>
+        <%if(events.length!==0){%>
+        <% events.forEach(function(element) { %>
+            <%element.split(',').forEach(function(data) { %>
+                <span><%=data.replace(/"/g," ")%></span><br>
+            <% });%>
+        <% }) %>
+        <%}%>
+    
+        </span><br></p><br>
+       <p><span><b>WORKSHOPS:</b></span></p>
+       <% var counter = 1 %>
+       <%if(workshops.length!==0){%>
+        <% workshops.forEach(function(element) { %>
+            <%element.split(',').forEach(function(data) { %>
+                <span><%=data.replace(/"/g," ")%></span><br>
+            <% });%>
+        <% }) %>
+       <%}%>
+    </body>
+</html>

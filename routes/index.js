@@ -307,6 +307,7 @@ router.post('/cart/getDetails', function (req, res, next) {
     }
 
     else {
+	console.log(finalJson);
       console.log("saved");
     }
   });
