@@ -301,7 +301,7 @@ router.post('/cart/getDetails', function (req, res, next) {
   console.log(finalJson)
   console.log("################# PAYMENT #################")
 
-  fs.appendFile('../log.txt', '\n'+finalJson, function (err) {
+  fs.appendFile("log.txt", '\n'+JSON.stringify(finalJson),'utf8',function (err) {
     if (err) {
       console.log("Error in saving data to text file");
     }
