@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 require('dotenv').config();
-var mongoDB = 'mongodb://'+process.env.DB_USER.toString()+':'+process.env.DB_PASS.toString()+'@ds119565.mlab.com:19565/asce';
+var mongoDB = 'mongodb://'+process.env.DB_USER.toString()+':'+process.env.DB_PASS.toString()+'@dsxxxx.mlab.com:xxxxx/xxxx';
  mongoose.connect(mongoDB,
     {useMongoClient:true
  });

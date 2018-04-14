@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
     let contingentID = req.body.contingentID;
     let password = req.body.password;
 
-    if(contingentID == "admin" && password == "asceadmin123") {
+    if(contingentID == "admin" && password == "") {
 
         responseJSON = {
             'success':true,

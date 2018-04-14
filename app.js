@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   cookieName: 'session', 
-  secret: 'blargadeeblargblarg_6547836587', 
+  secret: 'xxxxxxyyyyyyy_yyyyxxxx', 
   duration: 15 * 60 * 10000, 
   resave:false,
   saveUnintialized: false,
